@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Formulário usando inputs diferentes</title>
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+    <form class="form-user" action="cadastro.html" method="get" target="_blank">
+        <fieldset class="fieldset-dadosPessoais">
+            <legend>Dados pessoais</legend>
+            <div>
+                <label for="usuarioNome">Nome:</label>
+                <input type="text" id="usuarioNome" name="usuarioNome" value="Annchan4"
+            minlength="2" maxlength="40" size="40"/>
+            </div>
+            <div>
+                <label for="tel">Telefone:</label>
+                <input type="tel" id="tel" name="tel"
+            placeholder="(99) 999999999" pattern="[0-9]" title="apenas números" required/>
+            </div>
+            <div>
+                <label for="dataDeNascimento">Data de nascimento:</label>
+                <input type="date" id="dataDeNascimento" name="dataDeNascimento"/>
+            </div>
+            <div>
+                <label for="altura">Altura (em cm):</label>
+                <input type="number" id="altura" name="altura" pattern="[0-9]" title="apenas números"/>
+            </div>
+            <div>
+                <fieldset>
+                <legend>Gênero:</legend>
+                <input type="radio" name="genero" id="masculino" value="masculino" checked/>
+                <label for="masculino">masculino</label>
+                <input type="radio" name="genero" id="feminino" value="feminino"/>
+                <label for="feminino">feminino</label>
+                <input type="radio" name="genero" id="homemtrans" value="homemtrans"/>
+                <label for="homemtrans">homem trans</label>
+                <input type="radio" name="genero" id="mulhertrans" value="mulhertrans"/>
+                <label for="mulhertrans">mulher trans</label>
+                <input type="radio" name="genero" id="naobinario" value="naobinario"/>
+                <label for="naobinario">não binário</label>
+                <input type="radio" name="genero" id="naoinformar" value="naoinformar"/>
+                <label for="naoinformar">prefiro não informar</label>
+                </fieldset>
+            </div>
+            <div>
+                <label for="experienciaEmJogos">Experiência em jogos:</label>
+                <br>
+                <span>Min</span>
+                <input type="range" id="experienciaEmJogos"
+            name="experienciaemjogos" min="1" max="3" step="1" value="3"/>
+                <span>Max</span>
+            </div>
+            <div>
+                <label for="info">Fale sobre você:</label>
+                <textarea id="info" name="info" cols="30" rows="3"></textarea>
+            </div>
+            <div>
+                <label for="foto">Fotos de perfil:</label>
+                <input type="file" id="foto" name="foto" multiple/>
+            </div>
+        </fieldset>
+        <fieldset class="fieldset-dadosDeLogin">
+            <legend>Dados de login</legend>
+            <div class="icone-e-textfield">
+                <label for="email"><img src="img/envelope-at-fill.svg" alt="icone de email"></label>
+                <input type="email" id="email" name="email" size="40"
+                placeholder="digite seu email" required/>
+            </div>
+            <div class="icone-e-textfield">
+                <label for="usuarioSenha"><img src="img/at-sign.svg" alt="icone de senha"></label>
+                <input type="password" id="usuarioSenha" name="senha" size="40" 
+                placeholder="digite sua senha" required/>
+            </div>
+            <div>
+                <label for="corDeBackground">Cor de background:</label>
+                <input type="color" id="corDeBackground" name="corDeBackground"/>
+            </div>
+            <div>
+                <input type="checkbox" id="notificacoes" name="notificacoes" checked>
+                <label for="notificacoes">Desejo receber notificações via email</label>
+            </div>
+        </fieldset>
+        <fieldset class="fieldset-endereco">
+        <legend>Endereço</legend>
+            <div>
+                <label for="rua">Rua:</label>
+                <input type="text" id="rua" name="rua"
+            maxlength="100"/>
+            </div>
+            <div>
+                <label for="cep">Cep:</label>
+                <input type="number" id="cep" name="cep" pattern="[0-9]" title="apenas números"/>
+            </div>
+        </fieldset>
+        <input type="submit" value="cadastrar"/>
+        <input type="reset" value="limpar"/>
+    </form>
+</body>
+</html>

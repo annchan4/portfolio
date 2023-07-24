@@ -1,0 +1,15 @@
+.anuncioParaOQueVemAdiante
+{
+    font-weight: bold;
+    color: red;
+    margin: 0 auto; /*isso serve para centralizar coisas no container
+    de tamanho fixo*/
+    padding:0px 5px;
+}
+
+.obs
+{
+    color:red;
+    font-size:0.8rem;
+    text-align: center;
+}

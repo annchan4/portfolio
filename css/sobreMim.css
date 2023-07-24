@@ -1,0 +1,56 @@
+body
+{
+    margin: 0; /*apenas para n ter espacos perto da navbar*/
+    background: url("../img/beautifuldarkspacebackground.png") no-repeat center fixed;     
+    background-size: cover; 
+}
+
+@font-face 
+{
+    font-family: BetterPixels;
+    src: url("../fontes/BetterPixels.ttf");
+    /*declarei uma fonte nova para ser usada. Obs: nao funciona no firefox!*/
+}
+@font-face 
+{
+    font-family: RetroGaming;
+    src: url("../fontes/RetroGaming.ttf");
+    /*declarei uma fonte nova para ser usada. Obs: nao funciona no firefox!*/
+}
+
+/*coisas do texto resto da pag*/
+
+#pageTitle
+{
+    color:yellow;
+    font-family: RetroGaming,Arial;
+    text-align:center;
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+
+#textoDescricao
+{
+    color:yellow;
+    text-align: center;
+    font-family: RetroGaming,Arial;
+    font-size: 24px;
+}
+
+
+
+#textoPrincipal, #listaSobreMim li
+{
+    color:yellow;
+    font-family: RetroGaming,Arial;
+    inline-size: 100%;
+    overflow-wrap: break-word;
+}
+
+.labelInformacoesContato
+{
+    padding-left: 20px;
+    color:yellow;
+    font-family: RetroGaming,Arial;
+}

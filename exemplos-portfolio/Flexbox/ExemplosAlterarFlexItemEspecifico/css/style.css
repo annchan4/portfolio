@@ -1,0 +1,117 @@
+p
+{
+    font-weight: bold;
+}
+
+.anuncioParaOQueVemAdiante
+{
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+
+.obs
+{
+    color:red;
+    font-size:0.8rem;
+}
+
+
+.flex
+{
+    flex-direction: row; /*faz todos os elementos do container ficarem mostrados em linha(depois veremos colunas)*/
+    display: flex; /*faz o elemento virar flex container e seus filhos 
+    flex items (que ocupam apenas a largura dos seus conteúdos)*/
+    flex-wrap: nowrap;/*mesmo que itens preencham a linha toda da minha pag,
+    nao vou descer nenhum para baixo*/
+    border: 3px solid black;
+    background-color: #4e57ff4f;
+    margin:50px 20px; /*50px em cima e baixo e 20 nas laterais*/
+    height: 200px; /*defini um tamanho fixo p container apenas para entender 
+    melhor os atributos css que vou aplicar...senao eu n veria nenhum dos justify
+    tendo algum efeito */
+    align-items: center; /*quero mais items bem verticalmente no centro no meu container*/
+}
+
+.item
+{
+    padding: 25px;/*cima, baixo, esq e direita*/
+    background-color: #8389fe;
+    border: 3px solid #df4318;
+    margin:0;
+    font-size: 24px;
+    font-weight: bolder;
+    color:white;
+}
+
+.alignSelfFlexStart
+{
+    align-self: flex-start;
+}
+
+.alignSelfFlexEnd
+{
+    align-self: flex-end;
+}
+
+.alignSelfStretch
+{
+    align-self: stretch;
+}
+
+.itemWithFlexGrow1
+{
+    flex-grow: 1;
+    /*Digamos que eu queria que os meus items ocupem todo o espaço em branco do container...para isso, eu posso aplicar para todos os meus flex items o flex-grow:1;
+    TODOS ELES vão ocupar o mesmo espaço horizontal no meu container, independente do align:*/
+}
+
+.itemWithFlexGrow2
+{
+    flex-grow: 2;
+}
+
+.order0
+{
+    order:0;
+}
+.order1
+{
+    order:1;
+}
+.order2
+{
+    order:2;
+}
+.order3
+{
+    order:3;
+}
+.order4
+{
+    order:4;
+}
+
+/*breakpoints*/
+@media (max-width: 880px)
+{
+    .item
+    {
+        font-size: 12px;
+    }
+}
+@media (max-width: 576px)
+{
+    .item
+    {
+        padding:5px;
+        font-size:10px;
+    }
+} 
+@media (max-width: 350px)
+{
+    .item
+    {
+        font-size:2vw;
+    }
+} 

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Formulários</title>
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar px-0 mx-0">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <p class="text-center mt-3">Login</p>
+    <form action="" class="w-50 mx-auto">
+        <div class="mb-3">
+            <label for="inputEmail" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="inputEmail"/>
+        </div>
+        <div class="mb-3">
+            <label for="inputSenha" class="form-label">Senha:</label>
+            <input type="password" class="form-control" id="inputSenha"/>
+        </div>
+        <div class="mb-3">
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="inputManterConectado"/>
+                <label for="inputManterConectado" class="form-check-label">Manter conectado</label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <input type="submit" class="btn btn-primary" value="Entrar">
+        </div>
+    </form>
+
+    <p class="text-center">Perfil</p>
+    <form class="w-50 mx-auto">
+        <div class="mb-3">
+            <label for="inputComentario" class="form-label">Descrição pessoal:</label>
+            <textarea id="inputComentario" class="form-control" rows="10"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="inputReceberNotificacoes" class="form-label">Quando deseja receber notificações?</label>
+            <select class="form-select" id="inputReceberNotificacoes">
+                <option selected>Escolha uma</option>
+                <option value="nunca">nunca</option>
+                <option value="nunca">semanalmente</option>
+                <option value="nunca">mensalmente</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="inputGenero">Gênero:</label>
+            <div class="form-check" id="inputGenero">
+                <input type="radio" class="form-check-input" name="genero" id="masculino">
+                <label for="masculino" class="form-check-label">masculino</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="genero" id="feminino">
+                <label for="feminino" class="form-check-label">feminino</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="genero" id="homemTrans">
+                <label for="homemTrans" class="form-check-label">Homem trans</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="genero" id="mulherTrans">
+                <label for="mulherTrans" class="form-check-label">Mulher trans</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="genero" id="naoBinario" checked>
+                <label for="naoBinario" class="form-check-label">Não binário</label>
+            </div>
+        </div>
+    </form>
+    <p class="text-center mx-5">Exemplo de uso do Form floating (labels estilizadas em inputs de texto)</p>
+    <form class="w-50 mx-auto mb-5" action="">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingEmail" placeholder="exemplo@exemplo.com"/>
+            <label for="floatingEmail">Insira seu e-mail</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Minhasenha1234"/>
+            <label for="floatingPassword">Insira sua senha</label>
+        </div>
+    </form>
+    <p class="text-center">Endereço - Exemplo de uso do input group</p>
+    <form class="w-50 mx-auto mb-5" action="">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="cep">
+            <button class="btn btn-outline-primary"><i class="bi bi-search me-2"></i>Buscar</button>
+        </div>
+    </form>
+
+</body>
+</html>

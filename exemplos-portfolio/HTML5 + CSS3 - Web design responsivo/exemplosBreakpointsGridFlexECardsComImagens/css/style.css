@@ -1,0 +1,198 @@
+.anuncioParaOQueVemAdiante
+{
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+
+.obs
+{
+    color:red;
+    font-size:0.8rem;
+}
+
+.container
+{
+    /*com isso eu terei uma pagina de tamanho maximo fico e com conteudo 
+    centralizado, onde as margens invisiveis nao usadas serao igualmente distribuidas
+    no left e right ao redor do conteudo*/
+    max-width: 1300px;
+    margin:0 auto; /*topo e border eu quero 0 e right e left quero auto*/
+}
+
+.nav-menu
+{
+    list-style: none; /*tirei bullets*/
+    background-color: black;
+    padding:20px 5px;
+    color:white;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap:20px;
+    row-gap:10px;
+}
+
+.nav-menu ul li
+{
+    font-size: 18px;
+}
+
+.flexbox3ColsOu3Paragrafos
+{
+    display:flex;
+    flex-direction:row;
+    column-gap:30px;
+    row-gap:10px;
+}
+
+.grid-cards
+{
+    margin:50px 0; /*separacao top e down para o resto do conteudo da pagina*/
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:40px;
+}
+
+.grid-cards2
+{
+    margin:50px 0; /*separacao top e down para o resto do conteudo da pagina*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    /*usando auto-fit, eu nao defino quantas colunas minha grid vai ter,
+    isso vai depender da tela*/
+    /*jah o min-max pode ser lido assim: 350px como minimo garante
+    que cada item da grid vai ter no minimo 350px semore, 
+    mas o maximo eu coloquei 1fr porque
+    eu simplesmente quero que os itens da grid nunca ultrapassem 
+    em largura o tamanho de quem as envolvem, que no caso eh
+    o tamanho do grid ou do pai de grid ou do body mesmo*/
+    gap:40px;
+}
+
+.grid-cards3
+{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:10px;
+}
+
+.grid-cards4
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    gap:20px;
+}
+
+
+/*breakpoints*/
+@media(max-width:1200px){
+    /*do tamanho 992 ate 1200 eu vou aplicar esse CSS...*/
+    .container
+    {
+        max-width: 900px;
+    }
+}
+
+@media(max-width:992px){
+    /*do tamanho 768 ateh 992 eu vou aplicar esse CSS...*/
+    .container
+    {
+        max-width: 700px;
+    }
+
+    .grid-cards2
+    {
+        grid-template-columns: repeat(auto-fit,minmax(300px,80%));
+        /*meu max virou 80% porque nao quero que meus grid items ocupem
+        tanto espaco assim da tela*/
+        justify-content: center; /*como o grid item nao ocupa toda a largura,
+        eu preciso centralizar esse item*/
+    }
+
+    .grid-cards3
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media(max-width:768px){
+    /*do tamanho 576 ateh 768 eu vou aplicar esse CSS...*/
+    .container
+    {
+        padding: 0 10px;
+    }
+
+    .imagem
+    {
+        width:100%; /*em dispositivos moveis, a minha imagem nao
+        vai extrapolar a tela, vai ficar do tamanho dela*/
+    }
+
+    .nav-menu
+    {
+        /*em dispositivos moveis, se tiver muitos itens na navbar,  
+        vou passar alguns itens para baixo*/
+        flex-wrap:wrap;
+        column-gap:40px; vou dar mais espacamento, para ajudar quem tem dedos grandes
+        row-gap:30px;
+        flex-direction:column;
+    }
+
+    .flexbox3ColsOu3Paragrafos
+    {
+        flex-direction:column;
+        column-gap:10px;
+        row-gap:10px;
+    }
+
+    .grid-cards
+    {
+        grid-template-columns: 1fr 1fr; 
+        /*vou ter apenas 2 colunas em dispotivos pequenos*/
+    }
+
+}
+
+@media(max-width:576px){
+    /*do tamanho 0 ateh 576 eu vou aplicar esse CSS...*/
+    .container
+    {
+       padding: 0 5px;
+    }
+
+    .imagem
+    {
+        width:100%; /*em dispositivos moveis, a minha imagem nao
+        vai extrapolar a tela, vai ficar do tamanho dela*/
+    } 
+
+    .nav-menu
+    {
+        /*em dispositivos moveis, se tiver muitos itens na navbar,  
+        vou passar alguns itens para baixo*/
+        flex-wrap:wrap;
+        column-gap:30px;
+        row-gap:40px;
+        flex-direction: column;
+    }
+
+    .flexbox3ColsOu3Paragrafos
+    {
+        flex-direction:column;
+        column-gap:10px;
+        row-gap:10px;
+    }
+
+    .grid-cards
+    {
+        grid-template-columns: 1fr;
+        /*vou ter apenas 1 coluna em dispotivos bem pequenos*/
+    }
+
+    .grid-cards3
+    {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,187 @@
+.anuncioParaOQueVemAdiante
+{
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto; /*isso serve para centralizar coisas no container
+    de tamanho fixo*/
+    padding:0px 5px;
+}
+
+.obs
+{
+    color:red;
+    font-size:0.8rem;
+    text-align: center;
+}
+
+body
+{
+    background-color: rgb(151, 152, 240);
+}
+
+.pagina-toda
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    padding-top:10px;
+
+}
+
+.div-acesse-sua-conta
+{
+    border: 1px solid rgb(211, 210, 210);
+    border-radius: 5px;
+    width:70%; /*isso aqui eh o principal responsavel por 
+    fazer essa tela ficar completamente adaptada para smartphones*/
+    padding:25px;
+    background-color: white;
+}
+
+.tituloAcesseASuaConta
+{
+    text-align: center;
+    font-size:1rem;
+}
+
+#cpfOuEmail
+{
+    width:95%;
+    padding:10px 10px;
+    border-radius: 5px;
+    border:1px solid rgb(211, 210, 210);
+}
+#cpfOuEmail:focus
+{
+    outline:none; /*sem borda*/
+}
+
+.flex-formulario
+{
+    display:flex;
+    flex-direction: column;
+    row-gap:5px;
+}
+
+.senhaEEsqueciSenha
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.senhaEEsqueciSenha a
+{
+    color:rgb(82, 82, 245);
+}
+.senhaEEsqueciSenha a:not(:hover)
+{
+    text-decoration: none;
+}
+
+.senhaESeuIcone
+{
+    display:grid;
+    grid-template-columns: 0.95fr 0.05fr;
+    justify-content: space-between;
+    border:1px solid rgb(211, 210, 210);
+    border-radius: 5px;
+    width:95%;
+    padding:10px 10px;
+}
+.senhaESeuIcone input
+{
+    border:none;
+}
+.senhaESeuIcone input:focus
+{
+    outline: none;
+}
+.senhaESeuIcone img
+{
+    margin-right: 10px;
+}
+
+.naoTemUmaConta
+{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.naoTemUmaConta a
+{
+    margin-left: 5px;
+    text-decoration: none;
+    color:white;
+}
+
+#entrar
+{
+    background-color: rgb(13, 184, 13);
+    color:white;
+    border-radius: 5px;
+    margin-top:20px;
+    padding:10px;
+    border:none;
+    font-weight: bold;
+}
+
+#entrar:hover
+{
+    cursor:pointer;
+    background-color: rgb(10, 157, 10);
+    transition: .6s;
+}
+
+hr
+{
+    background-color: black;
+    width: 90%; /*por algum motivo (acho que a border),se eu n colocasse isso os hr nao estavam aparecendo*/
+}
+
+.ouESeusTracos
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.botaoLoginEIconeGoogle
+{
+    display:flex;
+    flex-direction: row;
+    border-radius: 5px;
+    border:1px solid rgb(211, 210, 210);
+    padding:0px 10px;
+    align-items: center;
+    justify-content:center;
+    cursor:pointer;
+    height:5%;
+}
+
+.botaoLoginEIconeGoogle:hover
+{
+    cursor:pointer;
+    border:1px solid black;
+
+}
+
+.botaoLoginEIconeGoogle img
+{
+    padding:0px;
+}
+.botaoLoginEIconeGoogle a
+{
+    padding:10px;
+    margin:0;
+    text-decoration: none;
+    color:black;
+}
+.botaoLoginEIconeGoogle a:visited
+{
+    text-decoration: none;
+}

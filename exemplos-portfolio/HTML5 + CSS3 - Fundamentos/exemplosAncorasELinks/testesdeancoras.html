@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"> <!--se quisesse em portugues, usava pt-BR-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de teste</title> <!--titulo do eu website-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+    <p class="descricaoDaSecao">Abaixo temos uma figura e sua caption apenas para ilustração</p>
+    <figure>
+        <img src="imagens/logohtml5.png" width="200" height="200" alt="Logo do html5"/>
+        <figcaption>Fig 1 - logo do html5</figcaption>
+    </figure>
+    <p class="descricaoDaSecao">Abaixo temos um link comum</p>
+    <p>   
+        Achei a figura no <a href="https://www.google.com.br">Google</a> 
+    </p>
+    <p class="descricaoDaSecao">Abaixo temos um link de email</p>
+    <a href="mailto:annchan4@outlook.com">Contato email</a><br/>
+    <p class="descricaoDaSecao">Abaixo temos um link de contato de celular</p>
+    <a href="tel:+5584991524459">Contato celular</a><br/>
+    <p class="descricaoDaSecao">Abaixo temos um link para uma página criada por mim</p>
+    <a href="contato.html" class="linkscomuns" target="blank" rel="noreferrer noopener">Contatos</a><br/>
+    <p class="descricaoDaSecao">Abaixo temos um link para uma página criada pela Google</p>
+    <a href="https://google.com.br" class="linkscomuns" rel="noreferrer noopener">Google</a><br/>
+    <!--Pq eu coloco esse noreferrer noopener? Pq pode ser que o website de destino faça engenharia reversa e acabe pegando meu código td-->
+    <p class="descricaoDaSecao">Abaixo temos um link para download de uma imagem</p>
+    <a href="imagens/logohtml5.png" download="logo.png">Download da imagem</a>
+
+    <p class="descricaoDaSecao">Abaixo temos algumas âncoras que levam à seções da página</p>
+    <a  class="ancoras" href="#texto1">Ir ao texto1</a><br/>
+    <a class="ancoras" href="#texto2">Ir ao texto2</a><br/>
+    <a class="ancoras" href="#texto3">Ir ao texto3</a><br/>
+    <div style="max-width: 50%;">
+    <h2 id="texto1" >Meu titulo 1</h2>
+    <p>
+        Dolor sit amet, consectetur adipiscing elit. Aliquam mattis
+    neque eget ultricies mattis. Cras sed nibh justo. Curabitur
+    auctor congue tortor sit amet rutrum. Etiam porta, urna egestas
+    sagittis vulputate, massa urna porttitor lectus, vitae varius quam
+    nisl ut massa. Mauris eget hendrerit nibh. Sed tortor velit, elementum
+    eu elit vel, consectetur dapibus quam. Sed eu rutrum dolor. Aliquam vel
+    magna at risus lacinia scelerisque vitae vitae augue. Nunc fringilla
+    posuere turpis, vel semper elit iaculis eget. Integer pretium est sit
+    amet ex tempus, in blandit lectus dictum. Nullam non risus sagittis, auctor
+    dolor vitae, suscipit ex. Curabitur fringilla vestibulum nunc non iaculis.
+    </p>
+
+    <h2 id="texto2" >Meu titulo 2</h2>
+    <p>
+        Dolor sit amet, consectetur adipiscing elit. Aliquam mattis
+    neque eget ultricies mattis. Cras sed nibh justo. Curabitur
+    auctor congue tortor sit amet rutrum. Etiam porta, urna egestas
+    sagittis vulputate, massa urna porttitor lectus, vitae varius quam
+    nisl ut massa. Mauris eget hendrerit nibh. Sed tortor velit, elementum
+    eu elit vel, consectetur dapibus quam. Sed eu rutrum dolor. Aliquam vel
+    magna at risus lacinia scelerisque vitae vitae augue. Nunc fringilla
+    posuere turpis, vel semper elit iaculis eget. Integer pretium est sit
+    amet ex tempus, in blandit lectus dictum. Nullam non risus sagittis, auctor
+    dolor vitae, suscipit ex. Curabitur fringilla vestibulum nunc non iaculis.
+    </p>
+
+    <h2 id="texto3" >Meu titulo 3</h2>
+    <p>
+        Dolor sit amet, consectetur adipiscing elit. Aliquam mattis
+    neque eget ultricies mattis. Cras sed nibh justo. Curabitur
+    auctor congue tortor sit amet rutrum. Etiam porta, urna egestas
+    sagittis vulputate, massa urna porttitor lectus, vitae varius quam
+    nisl ut massa. Mauris eget hendrerit nibh. Sed tortor velit, elementum
+    eu elit vel, consectetur dapibus quam. Sed eu rutrum dolor. Aliquam vel
+    magna at risus lacinia scelerisque vitae vitae augue. Nunc fringilla
+    posuere turpis, vel semper elit iaculis eget. Integer pretium est sit
+    amet ex tempus, in blandit lectus dictum. Nullam non risus sagittis, auctor
+    dolor vitae, suscipit ex. Curabitur fringilla vestibulum nunc non iaculis.
+    </p>
+
+    <h2 id="texto4" >Meu titulo 4</h2>
+    <p>
+        Dolor sit amet, consectetur adipiscing elit. Aliquam mattis
+    neque eget ultricies mattis. Cras sed nibh justo. Curabitur
+    auctor congue tortor sit amet rutrum. Etiam porta, urna egestas
+    sagittis vulputate, massa urna porttitor lectus, vitae varius quam
+    nisl ut massa. Mauris eget hendrerit nibh. Sed tortor velit, elementum
+    eu elit vel, consectetur dapibus quam. Sed eu rutrum dolor. Aliquam vel
+    magna at risus lacinia scelerisque vitae vitae augue. Nunc fringilla
+    posuere turpis, vel semper elit iaculis eget. Integer pretium est sit
+    amet ex tempus, in blandit lectus dictum. Nullam non risus sagittis, auctor
+    dolor vitae, suscipit ex. Curabitur fringilla vestibulum nunc non iaculis.
+    </p>
+
+    <h2 id="texto5" >Meu titulo 5</h2>
+    <p>
+        Dolor sit amet, consectetur adipiscing elit. Aliquam mattis
+    neque eget ultricies mattis. Cras sed nibh justo. Curabitur
+    auctor congue tortor sit amet rutrum. Etiam porta, urna egestas
+    sagittis vulputate, massa urna porttitor lectus, vitae varius quam
+    nisl ut massa. Mauris eget hendrerit nibh. Sed tortor velit, elementum
+    eu elit vel, consectetur dapibus quam. Sed eu rutrum dolor. Aliquam vel
+    magna at risus lacinia scelerisque vitae vitae augue. Nunc fringilla
+    posuere turpis, vel semper elit iaculis eget. Integer pretium est sit
+    amet ex tempus, in blandit lectus dictum. Nullam non risus sagittis, auctor
+    dolor vitae, suscipit ex. Curabitur fringilla vestibulum nunc non iaculis.
+    </p>
+
+    <h2 id="texto6" >Meu titulo 6</h2>
+    <p>
+        Dolor sit amet, consectetur adipiscing elit. Aliquam mattis
+    neque eget ultricies mattis. Cras sed nibh justo. Curabitur
+    auctor congue tortor sit amet rutrum. Etiam porta, urna egestas
+    sagittis vulputate, massa urna porttitor lectus, vitae varius quam
+    nisl ut massa. Mauris eget hendrerit nibh. Sed tortor velit, elementum
+    eu elit vel, consectetur dapibus quam. Sed eu rutrum dolor. Aliquam vel
+    magna at risus lacinia scelerisque vitae vitae augue. Nunc fringilla
+    posuere turpis, vel semper elit iaculis eget. Integer pretium est sit
+    amet ex tempus, in blandit lectus dictum. Nullam non risus sagittis, auctor
+    dolor vitae, suscipit ex. Curabitur fringilla vestibulum nunc non iaculis.
+    </p>
+    </div>
+</body>
+</html>

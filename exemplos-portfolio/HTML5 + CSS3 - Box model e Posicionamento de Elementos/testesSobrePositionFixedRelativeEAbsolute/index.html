@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Testes sobre position fixed relative ou absolute</title>
+</head>
+<body>
+    <header>
+        <!--navbars default do meu website-->
+    <div class="flexContainer-navbar">
+        <div>
+            <!--div da imagem-->
+            <img src="../../../img/annchan4LogoSmall.png" alt="">
+        </div>
+        <div class="navbar-desktop">
+            <!--div do menu no desktop-->
+            <ul class="flexContainer-nav-menu">
+                <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+            </ul>
+        </div>
+        <div class="navbar-mobile">
+            <!--div do menu no desktop-->
+            <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                <a href="#" class="botao-close-menu-mobile">
+                    <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                </a>
+            </ul>
+            <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+            </a>
+        </div>
+    </div>
+    </header>
+    <ul class="flex-menu">
+        <li>Home</li>
+        <li>Contato</li>
+        <li>Sobre</li>
+    </ul>
+    <p class="parag-1 anuncioParaOQueVemAdiante">O menu acima e a imagem abaixo têm position:fixed; e vão continuar na mesma posição mesmo que você dê scroll down na página</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non laoreet justo. Duis elementum mi sit amet dapibus laoreet. Sed eu hendrerit leo. Praesent consequat arcu at lacinia hendrerit. Fusce aliquam erat nibh, luctus interdum leo finibus sed. Fusce mauris massa, consequat quis sem sit amet, consequat vulputate lorem. Vivamus vestibulum nunc efficitur mi fringilla, vitae interdum nisl lacinia. Nullam purus justo, luctus at dignissim non, hendrerit nec lectus. Integer id mauris a ligula sollicitudin viverra. In pulvinar ex at bibendum euismod. Vestibulum a eleifend neque. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non laoreet justo. Duis elementum mi sit amet dapibus laoreet. Sed eu hendrerit leo. Praesent consequat arcu at lacinia hendrerit. Fusce aliquam erat nibh, luctus interdum leo finibus sed. Fusce mauris massa, consequat quis sem sit amet, consequat vulputate lorem. Vivamus vestibulum nunc efficitur mi fringilla, vitae interdum nisl lacinia. Nullam purus justo, luctus at dignissim non, hendrerit nec lectus. Integer id mauris a ligula sollicitudin viverra. In pulvinar ex at bibendum euismod. Vestibulum a eleifend neque. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non laoreet justo. Duis elementum mi sit amet dapibus laoreet. Sed eu hendrerit leo. Praesent consequat arcu at lacinia hendrerit. Fusce aliquam erat nibh, luctus interdum leo finibus sed. Fusce mauris massa, consequat quis sem sit amet, consequat vulputate lorem. Vivamus vestibulum nunc efficitur mi fringilla, vitae interdum nisl lacinia. Nullam purus justo, luctus at dignissim non, hendrerit nec lectus. Integer id mauris a ligula sollicitudin viverra. In pulvinar ex at bibendum euismod. Vestibulum a eleifend neque. </p>
+    <a href="#" class="icone-whatsapp">
+        <img src="img/whatsapp-icon.png" alt="icone whatsapp">
+    </a>
+
+    <p class="anuncioParaOQueVemAdiante">Usando o position:relative para alterar a posição de uma caixa dentro da outra...</p>
+    <p class="anuncioParaOQueVemAdiante">A)Antes</p>
+    <div class="box">
+        <div class="box-inside"></div>
+    </div>
+    <p class="anuncioParaOQueVemAdiante">B)Com relative, top:30px; e left:20px;</p>
+    <div class="box">
+        <div class="box-inside relative"></div>
+    </div>
+
+    <div class="box-absolute">Independente de ter pai ou não, esse quadrado de position absolute vai se mexer de acordo com a posição da página como um todo, ignorando quaisquer outros elementos. Mas diferentemente so fixed, ele não vai permanecer no lugar quando eu fizer scroll down</div>
+
+    <p class="anuncioParaOQueVemAdiante">Quadrado com position relative, left:-20px; mas z-index menor que o quadrado que o envolve (quadrado azul vai ficar por trás)</p>
+    <div class="box">
+        <div class="box-inside relative-negativo"></div>
+    </div>
+    
+
+    <div class="m-bottom"></div> <!--essa classe serve apenas para que eu possa dar scroll para baixo na tela-->
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de código - Fórmula matemática</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <link rel="stylesheet" href="../../../highlight/styles/default.min.css">
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <br/>
+    <br/>
+    <h1>Desafio de código - Fórmula matemática</h1>
+    <img src="imagens/enunciado.png" style="width:100%"/>
+    <img src="imagens/enunciado2.png" style="width:100%"/>
+    <pre>
+    <code>
+function calculo(a,b,n)
+{
+    var resposta = "";
+    for (var i = 0; i < n; i++)
+    {
+        var somaDosDoisElevadoAAlgo = 0;
+        for (var j = 0; j <= i; j++)
+        {
+            somaDosDoisElevadoAAlgo = somaDosDoisElevadoAAlgo + (2**j) * b;
+        }
+
+    
+        var maisUm = a + somaDosDoisElevadoAAlgo;
+        resposta = resposta + maisUm + " ";
+    }
+
+    return resposta;
+}
+
+var linha="5 3 5";
+var [a, b, c] = linha.trim().split(' ');
+var a = parseInt(a);
+var b = parseInt(b);
+var c = parseInt(c);
+console.log("a=" + a + ";b=" + b + ";c=" + c + ";");
+console.log(calculo(a,b,c));
+    </code>
+    </pre>
+</body>
+</html>
+<script src="javascript/scripts.js"></script>
+
+<!--coisas do plugin highlight: faz codigo ser mostrado-->
+<script src="../../../highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>

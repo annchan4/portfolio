@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Alert, confirm, prompt e abrir site usando window.open</title>
+</head>
+<body style="margin:0;">
+    <header>
+        <div class="flexContainer-navbar px-0 mx-0">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div style="margin-top: 10px">
+        <label for="siteParaAbrir">Site para abrir:</label>
+        <input type="text" name="siteParaAbrir" id="siteParaAbrir">
+        <button onClick="abrirSiteEmPopup()">Abrir site em popup</button>
+    </div>
+        <p style="color:red">Obs: Botão acima só cria popup em browser desktop, não funciona com mobile</p>
+    <br>
+    <br>
+    <button onClick="mostrarAlert()">Mostrar um alert</button>
+    <br>
+    <br>
+    <button onClick="mostrarConfirm()">Mostrar um confirm</button>
+    <br>
+    <br>
+    <button onClick="mostrarPrompt()">Mostrar um prompt</button>
+</body>
+
+<script src="javascript/scripts.js"></script>
+</html>

@@ -1,0 +1,104 @@
+.anuncioParaOQueVemAdiante
+{
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto; /*isso serve para centralizar coisas no container
+    de tamanho fixo*/
+    padding:0px 5px;
+}
+
+.obs
+{
+    color:red;
+    font-size:0.8rem;
+    text-align: center;
+}
+
+.form-user
+{
+    margin-top:10px;
+    width:90%;
+}
+
+.fieldset-dadosPessoais,.fieldset-dadosDeLogin
+{
+    width:60%;
+    display:flex;
+    flex-direction: column; /*cada conjunto de label e input vai ficar em uma linha*/
+    gap:20px;
+}
+
+
+.fieldset-endereco
+{
+    width:70%;
+    display:flex;
+    flex-direction: column; /*cada conjunto de label e input vai ficar em uma linha*/
+    gap:20px;
+}
+
+#rua
+{
+    width:90%;
+}
+
+
+input,textarea
+{
+    border:none;
+    background-color: rgb(221, 218, 218);
+    border-radius: 7px;
+}
+
+input[type="submit"],input[type="reset"]
+{
+    margin:15px 0;
+    padding:15px;
+    border: 2px black solid;
+    border-radius: 7px;
+    background-color: rgb(125, 249, 208);
+}
+
+input[type="submit"]:hover,input[type="reset"]:hover
+{
+    /*quando o cursor estiver em cima...*/
+    background-color: rgb(110, 219, 182);/*mudar cor*/
+    Cursor:pointer; /*cursor vai ficar com icone da maozinha*/
+    transition:.6s; /*passados alguns segs esse botao vai mudar de estilo*/
+}
+
+input[type="text"],input[type="tel"],input[type="number"],input[type="date"],input[type="password"],input[type="email"]
+{
+    height:30px;
+}
+
+.icone-e-textfield
+{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(221, 218, 218); /*com isso eu causo a impressao que o icone e o text estao juntos*/
+    padding-left:5px; /*para icone n ficar coladinho na esquerda*/
+    border-radius:4px;
+}
+
+.icone-e-textfield input:focus
+{
+    outline: none; /*nao vai ficar com borda ao ser selecionado*/
+}
+
+.icone-e-textfield img
+{
+    height:30px; /*faz icone ficar do tamanho do input, que previamente
+    eu tinha definido como tendo essa height
+    */
+}
+
+.icone-e-textfield input
+{
+    margin-left: 5px;
+}
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Exemplo de uso de web workers</title>
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar px-0 mx-0">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <h1 style="margin-top:10px;">Exemplo de uso de web workers</h1>
+    <p>Clique no botão para que o contador fique incrementando a cada segundo</p>
+    <p>O contador comum não usa web worker, mas o outro usa, e por isso é possível atualizar os dois ao mesmo tempo </p>
+    <div style="display:flex;flex-direction:row;Align-items:stretch;">
+        <p>Contador comum: </p><p id="valorContador">0</p>
+        <button onclick="incrementarContadorACada1Seg()" style="margin-left:10px">Começar</button>
+    </div>
+    <div style="display:flex;flex-direction:row;Align-items:stretch;margin-top: 10px;">
+        <p>Contador com web worker: </p><p id="valorContadorWebWorker">0</p>
+        <button onclick="incrementarContadorWebWorkerACada1Seg()" style="margin-left:10px">Começar</button>
+        <button onclick="terminarWebWorker()" style="margin-left:10px">Terminar</button>
+    </div>
+
+<script src="javascript/scripts.js"></script>
+</body>
+</html>

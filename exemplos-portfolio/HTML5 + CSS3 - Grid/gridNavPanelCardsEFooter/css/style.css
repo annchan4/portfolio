@@ -1,0 +1,113 @@
+.anuncioParaOQueVemAdiante
+{
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+
+.obs
+{
+    color:red;
+    font-size:0.8rem;
+}
+
+body
+{
+    margin:0;
+    padding:0; /*apenas para ficar um pouco mais centralizado*/
+}
+
+.container
+{
+    max-width:1200px;
+    margin:0 auto; /*o auto vai aplicar o que tem de espaco nos dois lados igualmente e sempre vai deixar centralizado*/
+    padding:0 15px;
+}
+
+/*coisas de header*/
+header
+{
+    background-color: #c6c6c6;
+}
+
+.grid-nav-menu
+{
+    display:grid;
+    grid-template-columns: 200px 1fr; /*a imagem tem 200px e a lista vai ocupar 1fr*/
+    gap:50px;
+    padding:20px 0; /*cima e baixo vai te rum padding de 20px, soh p n ficar muito colado*/
+    align-items: flex-end; /*texto vai ficar na parte de baixo, que nem a minha logo*/
+}
+
+.lista-flex-container
+{
+    padding: 0; /*naturalmente listas ja vem com padding, entao vamos tirar*/
+    margin:0;
+    list-style: none; /*tirei as bullets*/
+    display:flex; 
+    flex-direction: row;/*com isso, ao inves de ter uma lista com itens na
+    vertical, terei todos na horizontal, sem bullets*/
+    gap:15px;
+    flex-wrap: wrap;
+}
+
+.lista-flex-container li a
+{
+    /*ancoras dentro de list items da lista*/
+    text-decoration: none; /*links nao vao ter o sublinhado*/
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/*coisas de main*/
+.grid-cards
+{
+    margin-top: 70px;
+    display:grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(5,auto); /*quero 5 colunas de altura sendo auto*/
+    gap:50px;
+}
+
+/*coisas de footer*/
+footer
+{
+    background-color: #c6c6c6;
+}
+
+.grid-footer
+{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(2,0.25fr); /*1/4 do espaco*/
+    justify-content: center; /*alinhar no centro*/
+}
+
+.grid-footer ul
+{
+    list-style: none;
+    padding:0;
+}
+
+.grid-footer ul li
+{
+    margin:10px 0; /*margem em cima e baixo apenas*/
+    text-align: center;
+}
+
+/*breakpoints*/
+@media(max-width: 587px)
+{
+    .grid-cards
+    {
+        gap:2vw;
+    }
+}
+@media(max-width: 440px)
+{
+    .grid-cards
+    {
+        grid-template-columns: repeat(3,auto); /*quero 5 colunas de altura sendo auto*/
+    }
+}

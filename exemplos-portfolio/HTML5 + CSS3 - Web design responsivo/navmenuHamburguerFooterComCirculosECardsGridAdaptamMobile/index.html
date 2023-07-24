@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design responsivo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+</head>
+<body>
+   <header>
+    <nav class="container">
+        <!--menu mobile-->
+        <div class="menu-mobile">
+            <ul class="navbar-mobile" id="navbar-mobile">
+                <li><a href="https://www.google.com.br">Fotos</a></li>
+                <li><a href="https://www.youtube.com">Produtos</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="https://www.infoanimation.com">Contato</a></li>
+                <a href="#" class="botao-close-menu-mobile">
+                    <img src="img/x-lg.svg" alt="icone de fechamento">
+                </a>
+            </ul>
+            <a href="#navbar-mobile" class="botao-menu-hamburguer">
+                <img src="img/menuHamburguer.svg" alt="icone de abertura">
+            </a>
+        </div>
+
+        <!--menu desktop-->
+        <div class="flex-nav-menu">
+            <ul class="flex-list">
+                <li>Fotos</li>
+                <li>Produtos</li>
+                <li>Sobre</li>
+                <li>Contato</li>
+            </ul>
+            <div>
+                <div class="flex-search-field">
+                    <div class="flex-search-area">
+                        <img src="img/search.svg" alt="icone de busca">
+                        <input type="search" name="" id="">
+                    </div>
+                    <button>Buscar</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+   </header> 
+   <main>
+    <p class="anuncioParaOQueVemAdiante">
+        No desktop, o header acima tem uma searchbar feita com um flex de background branco,
+         uma imagem de lente de fundo transparente e sua borda antes e 
+         depois do foco é nenhuma. Em dispositivos móveis, o navbar se torna um botão de hamburguer para abrir menu
+    </p>
+    <section class="conteudo-principal">
+        <div class="container">
+            <h1>Minhas fotos</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget mauris non quam cursus fringilla ultrices tincidunt neque. Nullam id leo quis odio tristique rutrum mattis et elit. Cras eu consectetur nisi. Mauris dui nibh, pulvinar ut lectus eu, facilisis dictum quam. Phasellus eget dignissim lorem. Etiam metus magna, bibendum eget metus sed, semper suscipit turpis. Maecenas sodales tristique quam, bibendum feugiat lectus placerat at. Suspendisse sodales aliquam lacus non fringilla. </p>
+            <div class="buttons-field">
+                <button class="button-blue">Mais Fotos</button>
+                <button class="button-gray">Produtos</button>
+            </div>
+        </div>
+    </section>
+    <section class="galeria-fotos">
+        <div class="container">
+            <p class="anuncioParaOQueVemAdiante">Grid abaixo vai ter menos colunas em telas menores</p>
+            <div class="grid-cards">
+                <div class="card">
+                    <img src="img/gato5.png" alt="imagem de gato" width="100%">
+                    <!--o tamanho dda imagem vai depender do tamanho do card-->
+                    <h3>Meu Trabalho</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="button-blue">Ver mais</button>
+                </div>
+                <div class="card">
+                    <img src="img/gato5.png" alt="imagem de gato" width="100%">
+                    <!--o tamanho dda imagem vai depender do tamanho do card-->
+                    <h3>Meu Trabalho</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="button-blue">Ver mais</button>
+                </div>
+                <div class="card">
+                    <img src="img/gato5.png" alt="imagem de gato" width="100%">
+                    <!--o tamanho dda imagem vai depender do tamanho do card-->
+                    <h3>Meu Trabalho</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="button-blue">Ver mais</button>
+                </div>
+                <div class="card">
+                    <img src="img/gato5.png" alt="imagem de gato" width="100%">
+                    <!--o tamanho dda imagem vai depender do tamanho do card-->
+                    <h3>Meu Trabalho</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="button-blue">Ver mais</button>
+                </div>
+                <div class="card">
+                    <img src="img/gato5.png" alt="imagem de gato" width="100%">
+                    <!--o tamanho dda imagem vai depender do tamanho do card-->
+                    <h3>Meu Trabalho</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="button-blue">Ver mais</button>
+                </div>
+                <div class="card">
+                    <img src="img/gato5.png" alt="imagem de gato" width="100%">
+                    <!--o tamanho dda imagem vai depender do tamanho do card-->
+                    <h3>Meu Trabalho</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="button-blue">Ver mais</button>
+                </div>
+                <div class="card">
+                    <img src="img/gato5.png" alt="imagem de gato" width="100%">
+                    <!--o tamanho dda imagem vai depender do tamanho do card-->
+                    <h3>Meu Trabalho</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="button-blue">Ver mais</button>
+                </div>
+                <div class="card">
+                    <img src="img/gato5.png" alt="imagem de gato" width="100%">
+                    <!--o tamanho dda imagem vai depender do tamanho do card-->
+                    <h3>Meu Trabalho</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="button-blue">Ver mais</button>
+                </div>
+                <div class="card">
+                    <img src="img/gato5.png" alt="imagem de gato" width="100%">
+                    <!--o tamanho dda imagem vai depender do tamanho do card-->
+                    <h3>Meu Trabalho</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="button-blue">Ver mais</button>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+   </main>
+
+   <footer>
+    <div class="container">
+        <div>
+            <p>Esse site foi feito por Annchan4</p>
+            <hr> <!--linha-->
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="img/facebook.svg" alt="icone do facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/instagram.svg" alt="icone do instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/linkedin.svg" alt="icone do linkedin">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+   </footer>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Flex, divs, vídeos e border</title>
+</head>
+
+<body>
+    <header>
+        <div class="flexContainer-navbar px-0 mx-0">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="text-center mt-5">d-flex row, divs com margins</div>
+    <div class="d-flex flex-row justify-content-center border border-dark border-2 mx-2">
+        <div class="square m-1 text-center border border-dark border-5">1</div>
+        <div class="square mx-1 text-center border border-danger border-5">2</div>
+        <div class="square my-1 text-center border border-info border-5">3</div>
+        <div class="square ms-1 text-center border border-primary border-5">4</div>
+        <div class="square me-1 text-center border border-warning border-5">5</div>
+        <div class="square mt-1 text-center border border-success border-5">6</div>
+        <div class="square mb-1 text-center bg-info">7</div>
+    </div>
+    <div class="text-center">d-flex column, divs com margins</div>
+    <div class="d-flex flex-column border border-dark border-2 mx-2">
+        <div class="square m-5 text-center">1</div>
+        <div class="square mx-5 text-center">2</div>
+        <div class="square my-5 text-center">3</div>
+        <div class="square ms-5 text-center">4</div>
+        <div class="square me-5 text-center">5</div>
+        <div class="square mt-5 text-center">6</div>
+        <div class="square mb-5 text-center">7</div>
+    </div>
+
+    <div class="text-center">d-flex row, divs com padding</div>
+    <div class="d-flex flex-row justify-content-center border border-dark border-2 mx-2">
+        <div class="square p-5 text-center">1</div>
+        <div class="square px-5 text-center">2</div>
+        <div class="square py-5 text-center">3</div>
+        <div class="square ps-5 text-center">4</div>
+        <div class="square pe-5 text-center">5</div>
+        <div class="square pt-5 text-center">6</div>
+        <div class="square pb-5 text-center">7</div>
+    </div>
+    <div class="text-center">Links e videos(de quebra, a div tem width 50%)</div>
+    <div class="border border-dark border-2 ms-2 w-50">
+        <a href="#" class="link-danger">link com cor danger</a>
+        <p>Vídeo com ratio 1x1</p>
+        <div class="ratio ratio-1x1">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Q32usZXgNcg"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+        <p>Vídeo com ratio 4x3</p>
+        <div class="ratio ratio-4x3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Q32usZXgNcg"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+        <p>Vídeo com ratio 16x9</p>
+        <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Q32usZXgNcg"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+        <p>Vídeo com ratio 21x9</p>
+        <div class="ratio ratio-21x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Q32usZXgNcg"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="m-bottom"></div>
+</body>
+
+</html>

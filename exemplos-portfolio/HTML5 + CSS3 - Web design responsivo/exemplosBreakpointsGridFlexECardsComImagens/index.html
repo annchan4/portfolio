@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Exemplos breakpoints,grids,flex e cards com imagens</title>
+</head>
+<body>
+    <header>
+        <!--navbars default do meu website-->
+    <div class="flexContainer-navbar">
+        <div>
+            <!--div da imagem-->
+            <img src="../../../img/annchan4LogoSmall.png" alt="">
+        </div>
+        <div class="navbar-desktop">
+            <!--div do menu no desktop-->
+            <ul class="flexContainer-nav-menu">
+                <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+            </ul>
+        </div>
+        <div class="navbar-mobile">
+            <!--div do menu no desktop-->
+            <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                <a href="#" class="botao-close-menu-mobile">
+                    <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                </a>
+            </ul>
+            <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+            </a>
+        </div>
+    </div>
+    <!--navbars da pagina-->
+    
+        <div class="container">
+            <p class="anuncioParaOQueVemAdiante">Menu de navegação se adapta de acordo com tamanho de tela (teste no browser e no smartphone)</p>
+            <ul class="nav-menu">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+                <li>Item 6</li>
+                <li>Item 7</li>
+                <li>Item 8</li>
+                <li>Item 9</li>
+                <li>Item 10</li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <p class="anuncioParaOQueVemAdiante">Flexbox de 3 colunas em telas grandes e em telas pequenas(e.g., mobile) eu vou ter 3 paragrafos, com texto em linhas mesmo</p>
+        <h1>Titulo</h1>
+        <div class="flexbox3ColsOu3Paragrafos">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin luctus magna vel imperdiet accumsan. Sed at tempus erat. Praesent porttitor venenatis libero, id cursus elit. Mauris ornare lobortis quam a imperdiet. Donec sagittis, augue in auctor auctor, justo neque suscipit dolor, eu elementum arcu urna dignissim sem. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin luctus magna vel imperdiet accumsan. Sed at tempus erat. Praesent porttitor venenatis libero, id cursus elit. Mauris ornare lobortis quam a imperdiet. Donec sagittis, augue in auctor auctor, justo neque suscipit dolor, eu elementum arcu urna dignissim sem. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin luctus magna vel imperdiet accumsan. Sed at tempus erat. Praesent porttitor venenatis libero, id cursus elit. Mauris ornare lobortis quam a imperdiet. Donec sagittis, augue in auctor auctor, justo neque suscipit dolor, eu elementum arcu urna dignissim sem. </p>
+        </div>
+        <p class="anuncioParaOQueVemAdiante">Grid abaixo vai se adaptar bem para telas muito pequenas, ficando com 1 ou 2 colunas dependendo do tamanho da tela (usei breakpoints)</p>
+        <h2>Titulo2</h2>
+        <div class="grid-cards">
+            <div>
+                <img src="img/gato4.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div>
+                <img src="img/gato4.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div>
+                <img src="img/gato4.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+        </div>
+        <p class="anuncioParaOQueVemAdiante">Grid abaixo vai se adaptar bem em telas pequenas mesmo sem usar breakpoints</p>
+        <h2>Titulo3</h2>
+        <div class="grid-cards2">
+            <div>
+                <img src="img/gato4.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div>
+                <img src="img/gato4.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div>
+                <img src="img/gato4.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+        </div>
+
+        <p class="anuncioParaOQueVemAdiante">Grid abaixo vai se adaptar bem em telas pequenas, usando breakpoints, desta vez sao 6 imagens </p>
+        <h2>Titulo3</h2>
+        <div class="grid-cards3">
+            <div>
+                <img src="img/gato5.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div>
+                <img src="img/gato5.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div>
+                <img src="img/gato5.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div>
+                <img src="img/gato5.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div>
+                <img src="img/gato5.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div>
+                <img src="img/gato5.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+        </div>
+        
+        <p class="anuncioParaOQueVemAdiante">Mesma coisa do acima, mas usando o autofit em vez de definir breakpoints</p>
+        <h2>Titulo4</h2>
+        <div class="grid-cards4">
+            <div>
+                <img src="img/gato5.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div>
+                <img src="img/gato5.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div>
+                <img src="img/gato5.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div>
+                <img src="img/gato5.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div>
+                <img src="img/gato5.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div>
+                <img src="img/gato5.png" alt="Imagem de gato" width="100%">
+                <!--a imagem vai ter o tamanho que eu definir para o meu grid-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+        </div>
+
+        <p class="anuncioParaOQueVemAdiante">Imagem grande (500px de largura) vai diminuir largura em telas menores (tente acessar via smartphone)</p>
+        <img src="img/gato.png" width="500px" class="imagem"/> 
+        <!--esse eh apenas um tamanho padrao de imagem, mas em telas menores vai ficar sem extrapolar a pagina-->
+
+        <p class="anuncioParaOQueVemAdiante">Imagem abaixo vai ser diferente dependendo do tamanho da sua tela(tente acessar via browser e via smartphone)</p>
+        <picture>
+             <!--No tamanho de 576px para baixo eu terei a imagem abaixo-->
+             <source media="(max-width: 576px)" srcset="img/gato5.png" type="image/png">
+              <!--No tamanho de 768px para baixo eu terei a imagem abaixo-->
+            <source media="(max-width: 768px)" srcset="img/gato4.png" type="image/png">
+             <!--No tamanho de 992px para baixo eu terei a imagem abaixo-->
+             <source media="(max-width: 992px)" srcset="img/gato3.png" type="image/png">
+            <!--No tamanho de 1200px para baixo eu terei a imagem abaixo-->
+            <source media="(max-width: 1200px)" srcset="img/gato2.png" type="image/png">
+            <!--Em qualquer outro tamanho eu terei a imagem abaixo-->
+            <img src="img/gato.png" width="500px" class="imagem"/>
+        </picture>
+        <!--Obs: Caso eu não tivesse um <img> no fim, não funcionaria! Os source apenas vao se aplicar a <img> que existem!-->
+        <!--Obs2: A ordem importa! Coloque sempre do tamanho menor para o maior! -->
+    </div>
+
+
+</body>
+</html>

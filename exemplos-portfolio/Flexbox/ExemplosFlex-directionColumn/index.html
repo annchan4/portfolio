@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Flexbox - flex-direction column</title>
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+    <p class="anuncioParaOQueVemAdiante">
+        Em Todos os exemplos abaixo, eu tenho flex-direction: column; -> Faz o container mostrar os seus items em uma coluna
+    </p>
+
+    <p>
+        Como ficam meus items apenas fazendo flex-direction:column;
+    </p>
+    <div class="flex">
+        <div class="item">FlexItem1</div>
+        <div class="item">FlexItem2</div>
+        <div class="item">FlexItem3</div>
+        <div class="item">FlexItem4</div>
+        <div class="item">FlexItem5</div>
+    </div>
+
+    <p>
+        justify-content:center;
+    </p>
+    <div class="flex flexJustifyContentCenter">
+        <div class="item">FlexItem1</div>
+        <div class="item">FlexItem2</div>
+        <div class="item">FlexItem3</div>
+        <div class="item">FlexItem4</div>
+        <div class="item">FlexItem5</div>
+    </div>
+
+    <p>
+        justify-content:end;
+    </p>
+    <div class="flex flexJustifyContentEnd">
+        <div class="item">FlexItem1</div>
+        <div class="item">FlexItem2</div>
+        <div class="item">FlexItem3</div>
+        <div class="item">FlexItem4</div>
+        <div class="item">FlexItem5</div>
+    </div>
+    <p>
+        justify-content:start;
+    </p>
+    <div class="flex flexJustifyContentStart">
+        <div class="item">FlexItem1</div>
+        <div class="item">FlexItem2</div>
+        <div class="item">FlexItem3</div>
+        <div class="item">FlexItem4</div>
+        <div class="item">FlexItem5</div>
+    </div>
+
+    <p>
+        justify-content:space-around;
+    </p>
+    <div class="flex flexJustifyContentSpaceAround">
+        <div class="item">FlexItem1</div>
+        <div class="item">FlexItem2</div>
+        <div class="item">FlexItem3</div>
+        <div class="item">FlexItem4</div>
+        <div class="item">FlexItem5</div>
+    </div>
+
+    <p>
+        justify-content:space-between;
+    </p>
+    <div class="flex flexJustifyContentSpaceBetween">
+        <div class="item">FlexItem1</div>
+        <div class="item">FlexItem2</div>
+        <div class="item">FlexItem3</div>
+        <div class="item">FlexItem4</div>
+        <div class="item">FlexItem5</div>
+    </div>
+
+    <p>
+        justify-content:space-evenly;
+    </p>
+    <div class="flex flexJustifyContentSpaceEvenly">
+        <div class="item">FlexItem1</div>
+        <div class="item">FlexItem2</div>
+        <div class="item">FlexItem3</div>
+        <div class="item">FlexItem4</div>
+        <div class="item">FlexItem5</div>
+    </div>
+
+    <p>
+        align-items:stretch;
+    </p>
+    <div class="flex flexAlignItemsStretch">
+        <div class="item">FlexItem1</div>
+        <div class="item2">FlexItem2</div>
+        <div class="item">FlexItem3</div>
+        <div class="item2">FlexItem4</div>
+        <div class="item">FlexItem5</div>
+    </div>
+
+    <p>
+        align-items:center;
+    </p>
+    <div class="flex flexAlignItemsCenter">
+        <div class="item">FlexItem1</div>
+        <div class="item2">FlexItem2</div>
+        <div class="item">FlexItem3</div>
+        <div class="item2">FlexItem4</div>
+        <div class="item">FlexItem5</div>
+    </div>
+
+    <p>
+        Flex column com total centralização horizontal
+    </p>
+    <div class="flex flexTotalCentralizacaoHorizontal">
+        <div class="item">FlexItem1</div>
+        <div class="item">FlexItem2</div>
+        <div class="item">FlexItem3</div>
+        <div class="item">FlexItem4</div>
+        <div class="item">FlexItem5</div>
+    </div>
+
+    <p>
+        align-items:flex-start
+    </p>
+    <div class="flex flexAlignItemsFlexStart">
+        <div class="item">FlexItem1</div>
+        <div class="item">FlexItem2</div>
+        <div class="item">FlexItem3</div>
+        <div class="item">FlexItem4</div>
+        <div class="item">FlexItem5</div>
+    </div>
+
+    <p>
+        align-items:flex-end
+    </p>
+    <div class="flex flexAlignItemsFlexEnd">
+        <div class="item">FlexItem1</div>
+        <div class="item">FlexItem2</div>
+        <div class="item">FlexItem3</div>
+        <div class="item">FlexItem4</div>
+        <div class="item">FlexItem5</div>
+    </div>
+
+    <p>
+        flex container com gap
+    </p>
+    <div class="flex flexComGap">
+        <div class="item">FlexItem1</div>
+        <div class="item">FlexItem2</div>
+        <div class="item">FlexItem3</div>
+        <div class="item">FlexItem4</div>
+        <div class="item">FlexItem5</div>
+    </div>
+    
+   
+</body>
+</html>

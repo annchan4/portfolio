@@ -1,0 +1,71 @@
+.descricaoDaSecao
+{
+    font-weight: bold;
+    color:red;
+}
+
+p
+{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@font-face 
+{
+    font-family: BetterPixels;
+    src: url("fontes/BetterPixels.ttf");
+    /*declarei uma fonte nova para ser usada. Obs: nao funciona no firefox!*/
+}
+
+div
+{
+    font-family: BetterPixels,Arial;
+}
+
+#textoFonteGoogle
+{
+    font-family: 'Fasthand', cursive;
+}
+
+#textoEstilizado
+{
+    font-size: 12px;
+    color:red;
+    font-style: italic;
+    font-weight: bolder;
+    text-indent: 15px; /*identacao, como um paragrafo*/
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercasE;
+}
+#textoEstilizado2
+{
+    color:black;
+    text-shadow: 1px 2px 2px red;
+}
+
+#letrasseparadas
+{
+    letter-spacing: 5px;
+}
+#palavrasseparadas
+{
+    word-spacing: 15px;
+}
+#linhasMaiorEspacamento
+{
+    font-size: 20px;
+    text-align: justify;
+    max-width: 200px;
+    line-height: 2.5;
+}
+
+#textoComParagrafoPre-line
+{
+    white-space: pre-line; /*esse valor significa preservar 
+    quebra de linha e nao preservar espacos em branco*/
+}
+#textoComParagrafoPre
+{
+    white-space: pre; /*esse valor significa preservar 
+    quebra de linha e espacos em branco*/
+}

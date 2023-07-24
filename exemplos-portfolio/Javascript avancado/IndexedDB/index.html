@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>IndexedDB</title>
+</head>
+<body>
+
+    <header>
+        <div class="flexContainer-navbar px-0 mx-0">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <h1 style="margin-top:10px">Trabalhando com indexedDB</h1>
+    <p>Adicione, remova e pesquise por items do banco de dados(indexedBD) Login, de store Users</p>
+    <p>Se quiser, use o inspect da página para verificar o estado do indexedBD</p>
+    <div>
+        <p style="margin-top: 20px;font-weight: bold;">Inserir(imprime o novo objeto no console também)</p>
+        <div>
+            <label for="usuario_inserir">Usuário(chave):</label>
+            <input type="text" name="usuario_inserir" id="usuario_inserir">
+        </div>
+        <div style="margin-top: 10px;">
+            <label for="senha_inserir">Senha:</label>
+            <input type="text" name="senha_inserir" id="senha_inserir">
+        </div>
+        <input type="button" value="Inserir" onclick="inserirUsuario()" style="margin-top: 10px;">
+    </div>
+    <div>
+        <p style="margin-top: 20px;font-weight: bold;">Buscar por um item</p>
+        <label for="usuario_buscar">Usuário(chave):</label>
+        <input type="text" name="usuario_buscar" id="usuario_buscar">
+        <input type="button" value="buscar" onclick="buscarUmItemNoBD()">
+        <div id="itemAchado">
+            <!--aqui vai ficar os dados do item achado-->
+        </div>
+    </div>
+    <div>
+        <p style="margin-top: 20px;font-weight: bold;">Atualizar item</p>
+        <div>
+            <label for="usuario_atualizar">Usuário(chave):</label>
+            <input type="text" name="usuario_atualizar" id="usuario_atualizar">
+        </div>
+        <div style="margin-top: 10px;">
+            <label for="senha_atualizar">Senha nova:</label>
+            <input type="text" name="senha_atualizar" id="senha_atualizar">
+        </div>
+        <input type="button" value="atualizar" onclick="atualizarUmItemNoBD()" style="margin-top: 10px;">
+        <div id="itemAtualizado">
+            <!--aqui vai ficar os dados do item achado-->
+        </div>
+    </div>
+    <div>
+        <p style="margin-top: 20px;font-weight: bold;">Remover item</p>
+        <label for="usuario_remover">Usuário(chave):</label>
+        <input type="text" name="usuario_remover" id="usuario_remover">
+        <input type="button" value="remover" onclick="removerUmItemDoBD()">
+        <div id="itemRemovido">
+            <!--aqui vai ter uma frase indicando se teve sucesso ou nao-->
+        </div>
+    </div>
+    <div>
+        <p style="margin-top: 20px;font-weight: bold;">Retornar todos os itens do BD</p>
+        <input type="button" value="Pegar todos" onclick="pegarTodosOsItensDoBD()">
+        <div id="listaDeTodosOsItensDoBD">
+            <!--aqui vao ficar todos os itens-->
+        </div>
+    </div>
+    
+
+
+<script src="javascript/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+exemplo de uso de event listener, timeout, debouncing e prevent default(para event listener) 

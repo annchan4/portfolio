@@ -1,0 +1,13 @@
+//vou definir nessa classe as variaveis do bootstrap que eu vou querer alterar o valor
+$primary: #6df015;
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 10,
+) !default; 
+//o 6: $spacer * 4 vai garantir que eu possa usar a variavel que eu defini: mb-6

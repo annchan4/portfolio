@@ -1,0 +1,30 @@
+#listaMenuDeNavegacao
+{
+    list-style: none; /*tira bullets da ul*/
+    background-color: burlywood;
+    margin-top: 0; /*sempre tem uma margin*/
+    padding:10px;
+    display:flex; /*faz a lista ficar horizontal, itens na mesma linha*/
+    justify-content: space-around; /*faz itens do menu ficarem espaçados*/
+}
+body
+{
+    margin:0;
+    padding: 0; /*apenas para fazer listaMenuDeNavegacao NaoFicar com bordas*/
+}
+
+.listaOrdenada
+{
+    list-style: upper-latin;
+}
+
+.listaNaoOrdenada
+{
+    list-style: url('../img/cursorCouragesMark.png'); 
+    /*lembre-se: estamos dentro da pasta css*/
+}
+
+p
+{
+    font-weight: bold;
+}

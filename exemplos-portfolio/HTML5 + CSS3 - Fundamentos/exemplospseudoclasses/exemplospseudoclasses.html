@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"> <!--se quisesse em portugues, usava pt-BR-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de teste</title> <!--titulo do eu website-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+    <h2 id="elementopressionavel">Elemento que ao ser pressionado vai mudar cor</h2>
+    <h2 id="elementohover">Elemento que muda cor quando mouse fica em cima</h2>
+    <br/>
+    <input type="checkbox"/><span>VaiFicarVermelhoAoChecar</span><br/>
+    <p> Abaixo, input (caixa de texto) possui atributo disabled, por isso fica desabilitado</p>
+    Idade:<input type="text" disabled><br/>
+    <p> Abaixo, quando um input (caixa de texto) fica selecionado, muda cor</p>
+    Nome:<input type="text"><br/>
+    Endereco:<input type="text"><br/>
+    <p>Teste usando seletor CSS chamado h1:empty, vai fazer um h1 vazio(entre os dois h1 não vazios) ser preenchido por uma linha</p>
+    <h1>h1NaoVazio</h1>
+    <h1></h1> <!-- -->
+    <h1>h1NaoVazio</h1>
+
+    <p>Uso dos seletores #minhalista > li:first-child(primeiro item da lista), #minhalista > li:last-child(último item da lista),
+         #minhalista > li:nth-child(3) (terceiro item da lista), #minhalista > li:nth-child(even) (itens pares da lista) e 
+         #minhalista >li:not(even) (itens não pares da lista)...além disso, tente colocar o cursor em cima de um item da lista,
+        pois algum comportamento foi definido para #minhalista >li:not(:hover) (se o elemento não estiver com cursor em cima)</p>
+    <ul id="minhalista">
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+        <li>Item4</li>
+
+    </ul>
+
+</body>
+</html>

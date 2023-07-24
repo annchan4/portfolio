@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Flexbox - Flexitem</title>
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+    <p class="anuncioParaOQueVemAdiante">
+        Nos exemplos abaixo, estou modificando flex items específicos, colocando atributos CSS nele em vez de no container
+    </p>
+
+    <p>
+        Items tem align-self:flex-start; e align-self:flex-end; e align-self: stretch;
+    </p>
+    <div class="flex">
+        <div class="item">FlexItem1</div>
+        <div class="item">FlexItem2</div>
+        <div class="item alignSelfFlexStart">FlexItem3</div>
+        <div class="item alignSelfFlexEnd">FlexItem4</div>
+        <div class="item alignSelfStretch">FlexItem5</div>
+    </div>
+
+    <p>
+        Items tem flex-grow:1; e tudo previamente definido... todos os items vão ocupar mesmo espaço horizontal do container
+    </p>
+    <div class="flex">
+        <div class="item itemWithFlexGrow1">FlexItem1</div>
+        <div class="item itemWithFlexGrow1">FlexItem2</div>
+        <div class="item itemWithFlexGrow1 alignSelfFlexStart">FlexItem3</div>
+        <div class="item itemWithFlexGrow1 alignSelfFlexEnd">FlexItem4</div>
+        <div class="item itemWithFlexGrow1 alignSelfStretch">FlexItem5</div>
+    </div>
+
+    <p>
+        Item1 tem flex-grow:1; e tudo previamente definido... nesse caso apenas o item1 vai expandir e empurrar tudo para o lado
+    </p>
+    <div class="flex">
+        <div class="item itemWithFlexGrow1">FlexItem1</div>
+        <div class="item">FlexItem2</div>
+        <div class="item alignSelfFlexStart">FlexItem3</div>
+        <div class="item alignSelfFlexEnd">FlexItem4</div>
+        <div class="item alignSelfStretch">FlexItem5</div>
+    </div>
+
+    <p>
+        Item1 tem flex-grow:1; e Item2 tem flex-grow:2 e tudo previamente definido... nesse caso apenas o item1 e item2 vao expandir e empurrar tudo para o lado, mas o 2 vai ser o dobro do 1
+    </p>
+    <div class="flex">
+        <div class="item itemWithFlexGrow1">FlexItem1</div>
+        <div class="item itemWithFlexGrow2">FlexItem2</div>
+        <div class="item alignSelfFlexStart">FlexItem3</div>
+        <div class="item alignSelfFlexEnd">FlexItem4</div>
+        <div class="item alignSelfStretch">FlexItem5</div>
+    </div>
+
+    <p>
+        Items tem atributo order que define a ordem de apresentacao
+    </p>
+    <div class="flex">
+        <div class="item order3">FlexItem1</div>
+        <div class="item order0">FlexItem2</div>
+        <div class="item alignSelfFlexStart order4">FlexItem3</div>
+        <div class="item alignSelfFlexEnd order2">FlexItem4</div>
+        <div class="item alignSelfStretch order1">FlexItem5</div>
+    </div>
+   
+    
+   
+</body>
+</html>

@@ -1,0 +1,180 @@
+.anuncioParaOQueVemAdiante
+{
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+
+.obs
+{
+    color:red;
+    font-size:0.8rem;
+}
+
+body
+{
+    margin:10px; /*apenas para ficar um pouco mais centralizado*/
+}
+
+.grid-container
+{
+    background-color: gray;
+    border: solid 2px black;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr; /*demarca a largura maxima 
+    que nossas colunas vao ter. Se eu dou 3 valores, significa que eu quero que a grid tenha 3 colunas*/
+    /*De quebra, colocando o valor 1fr, eu garanto que cada um dos meus itens tem o mesmo tamanho e eles vão ocupar o tamanho todo do container, bem melhor que se eu botasse em %*/
+    grid-template-rows: 1fr 1fr 1fr;
+    /*demarca altura maxima da minha linha*/
+}
+
+.grid-item
+{
+    background-color: rgb(80, 80, 247);
+    border: solid 2px greenyellow;
+}
+
+.grid-container2
+{
+    background-color: gray;
+    border: solid 2px black;
+    display:grid;
+    grid-template-columns: 0.2fr 1fr; /*como eu quero apenas um
+     menu lateral e um centro,basta 2 colunas*/
+    grid-template-rows: 100px 400px 100px;
+    /*altura da minha primeira,segundae terceira linha*/
+    grid-template-areas: "header header"
+                        "sidebar conteudo-principal"
+                        "sidebar footer";
+    /*no primeiro valor entre aspas eu digo o que vai ficar na 
+    minha primeira linha. No exemplo,na primeira linha, 
+    nas primeiras e segundas colunas eu tenho o header*/
+    /*no segundo valor eu digo o que vai ter na linha segunda linha, e assim vai*/
+    /*perceba que a quantidade de linhas e colunas da grid delimita quantos
+    valores dentro de aspas e quantas aspas eu vou ter como valor do meu
+    grid-template-areas*/
+}
+
+.grid-item2
+{
+    background-color: rgb(80, 80, 247);
+    border: solid 2px greenyellow;
+}
+
+.header
+{
+    grid-area:header; /*eu quero que a minha classe header ocupe o que
+    o meu grid-template-areas chamou de header...eu podia ter usado outro 
+    nome*/
+}
+.sidebar
+{
+    grid-area: sidebar;
+}
+.conteudo-principal
+{
+    grid-area: conteudo-principal;
+}
+.footer
+{
+    grid-area: footer;
+}
+
+.gridComGap
+{
+    column-gap: 20px; /*espacamento entre minhas colunas*/
+    row-gap: 20px; /*espacamento entre minhas linhas*/
+    
+}
+
+.grid-container3
+{
+    background-color: gray;
+    border: solid 2px black;
+    display:grid;
+    grid-template-columns: auto auto; /*como eu quero apenas um
+     menu lateral e um centro,basta 2 colunas*/
+    grid-template-rows: auto auto auto;
+    /*altura da minha primeira,segundae terceira linha*/
+    grid-template-areas: "header header"
+                        "sidebar conteudo-principal"
+                        "sidebar footer";
+}
+
+.footerWithPadding
+{
+    padding: 100px 50px; /*top-down e left-right*/
+}
+
+.grid-container4
+{
+    background-color: gray;
+    border: solid 2px black;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(70%,1fr)); 
+    /*usando auto-fit, eu quero que as
+    colunas se adequem ao tamanho que queremos delimitar (células
+    podem até mesmo se esticar). O tamanho que
+    eu quero é no mínimo 70% da página e máximo 1fr...se eu tiver um item 
+    bem pequeno, ainda sim ele vai ter um grande tamanho*/
+}
+
+.grid-item4
+{
+    background-color: rgb(80, 80, 247);
+    border: solid 2px greenyellow;
+    font-size: 24px;
+    font-weight: 900;
+    padding: 10px;
+}
+
+.grid-container5
+{
+    background-color: gray;
+    border: solid 2px black;
+    display:grid;
+    grid-template-columns: repeat(5,10vw);/*quero 5 colunas de 10vw, funcionaria para mobile tb*/
+    justify-content: space-between; /*assim como no flexbox, 
+    meus items vao ficar com o mesmo espacamento e o primeiro e ultimo vao ficar perto das laterais*/
+}
+
+.grid-container6
+{
+    background-color: gray;
+    border: solid 2px black;
+    display:grid;
+    grid-template-columns: repeat(5,10vw);/*quero 5 colunas de 10vw, funcionaria para mobile tb*/
+    grid-template-rows: 20vw;/*quero apenas 1 linha, mas que ela seja bem altona*/
+    justify-content:center;
+    align-items: center; /*items verticalmente alinhados, de quebra
+    os meus items não vão ocupar toda a altura que defini para meu row*/
+}
+
+.grid-item4Start
+{
+   align-self: flex-start;
+}
+.grid-item4End
+{
+   align-self: flex-end;
+}
+.grid-item4Center
+{
+    justify-self: center;
+    /*Mesma coisa do align-self, mas para alinhar horizontalmente
+     um item. No caso, isso funciona em grid da seguinte forma: por 
+     padrão temos justify-self: stretch; que significa que o item
+      vai crescer horizontalmente até o tamanho da coluna. 
+      Porém, se eu coloco justify-content, ele vai ocupar apenar 
+      o que precisar do tamanho horizontal da coluna*/
+}
+
+/*breakpoints*/
+@media(max-width: 410px)
+{
+    img
+    {
+        width:90%;
+
+    }
+}

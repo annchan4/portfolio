@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de código - Ordenar arrays de objetos</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <link rel="stylesheet" href="../../../highlight/styles/default.min.css">
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <br/>
+    <br/>
+    <h1>Desafio de código - Ordenar arrays de objetos</h1>
+    <img src="imagens/enunciado.png" style="width:100%"/>
+    <pre>
+    <code>
+function auxOrdPlacarENomes(a,b)
+{
+    //dado um array, ordena inversamente por placar, mas caso tenha 2 itens
+    //de mesmo placar, ordena alfabeticamente
+    if(a.placar < b.placar)
+    {
+        return 1;
+    }
+    else if(a.placar == b.placar && a.nome > b.nome)
+    {
+        return 1;
+    }
+    else
+    {
+        return -1;
+    }
+}
+
+function imprimirArrayNomesEPlacar(array1)
+{
+    for(var i = 0; i < array1.length; i++)
+    {
+        console.log(array1[i].nome + " " + array1[i].placar);
+    }
+}
+
+function ordenacao(jogadores)
+{
+    //Informe seu código aqui
+    var nomesOrd = jogadores.sort(auxOrdPlacarENomes);
+    imprimirArrayNomesEPlacar(nomesOrd);
+    
+}
+
+var jogadores=[
+    { nome: 'amy', placar: 100 },
+    { nome: 'david', placar: 100 },
+    { nome: 'heraldo', placar: 50 },
+    { nome: 'aakansha', placar: 75 },
+    { nome: 'aleksa', placar: 150 }
+    ];
+
+ordenacao(jogadores);        
+    </code>
+    </pre>
+</body>
+</html>
+<script src="javascript/scripts.js"></script>
+
+<!--coisas do plugin highlight: faz codigo ser mostrado-->
+<script src="../../../highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>

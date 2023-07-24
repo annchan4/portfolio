@@ -1,0 +1,114 @@
+p
+{
+    font-weight: bold;
+}
+
+.anuncioParaOQueVemAdiante
+{
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+
+.obs
+{
+    color:red;
+    font-size:0.8rem;
+}
+
+
+.flex
+{
+    flex-direction: column; /*faz todos os elementos do container ficarem mostrados em linha(depois veremos colunas)*/
+    display: flex; /*faz o elemento virar flex container e seus filhos 
+    flex items (que ocupam apenas a largura dos seus conteúdos)*/
+    border: 3px solid black;
+    background-color: #4e57ff4f;
+    margin:50px 20px; /*50px em cima e baixo e 20 nas laterais*/
+    height: 600px; /*defini um tamanho fixo p container apenas para entender 
+    melhor os atributos css que vou aplicar...senao eu n veria nenhum dos justify
+    tendo algum efeito */
+}
+
+.item
+{
+    padding: 25px;/*cima, baixo, esq e direita*/
+    background-color: #8389fe;
+    border: 3px solid #df4318;
+    margin:0;
+    font-size: 24px;
+    font-weight: bolder;
+    color:white;
+}
+
+.flexJustifyContentCenter
+{
+    justify-content: center;
+}
+
+.flexJustifyContentEnd
+{
+    justify-content: end;
+}
+
+.flexJustifyContentStart
+{
+    justify-content: start;
+}
+
+.flexJustifyContentSpaceAround
+{
+    justify-content: space-around;
+}
+
+.flexJustifyContentSpaceBetween
+{
+    justify-content: space-between;
+}
+
+.flexJustifyContentSpaceEvenly
+{
+    justify-content: space-evenly;
+}
+
+.item2
+{
+    padding: 50px 25px;/*cima, baixo e esq e direita*/
+    background-color: #8389fe;
+    border: 3px solid #df4318;
+    margin:0;
+    font-size: 24px;
+    font-weight: bolder;
+    color:white;
+}
+
+.flexAlignItemsStretch
+{
+    align-items: stretch;
+}
+
+.flexAlignItemsCenter
+{
+    align-items: center;
+}
+
+.flexTotalCentralizacaoHorizontal
+{
+    justify-content: center;
+    align-items: center;
+}
+
+.flexAlignItemsFlexStart
+{
+    align-items: flex-start;
+}
+
+.flexAlignItemsFlexEnd
+{
+    align-items: flex-end;
+}
+
+.flexComGap
+{
+    gap:20px;
+}

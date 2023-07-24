@@ -1,0 +1,12 @@
+.descricaoDaSecao
+{
+    font-weight: bold;
+    color:red;
+}
+.textoMuitoGrande
+{
+    /*se esse texto muito grande 
+    aparecesse em dispositivos muito pequenos, iria quebrar*/
+    inline-size: 100%;
+    overflow-wrap: break-word;
+}

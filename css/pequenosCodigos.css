@@ -1,0 +1,290 @@
+body
+{
+    margin: 0; /*apenas para n ter espacos perto da navbar*/
+    background: url("../img/beautifuldarkspacebackground.png") no-repeat center fixed;     
+    background-size: cover; 
+}
+
+@font-face 
+{
+    font-family: BetterPixels;
+    src: url("../fontes/BetterPixels.ttf");
+    /*declarei uma fonte nova para ser usada. Obs: nao funciona no firefox!*/
+}
+@font-face 
+{
+    font-family: RetroGaming;
+    src: url("../fontes/RetroGaming.ttf");
+    /*declarei uma fonte nova para ser usada. Obs: nao funciona no firefox!*/
+}
+
+
+/*coisas da grid que engloba tudo*/
+.grid-engloba-tudo
+{
+    padding-left:25%;
+}
+
+/*coisas do navPanelLateral*/
+.gridItem-navPanelLateral
+{
+    background-color: rgb(72, 72, 153);
+    border: 2px solid black;
+    padding:0 10px 10px 10px;
+    position:fixed;
+    top:20%;
+    left:0;
+    width:20%;
+}
+
+#navPanelLateralTitulo
+{
+    width:100%;
+    /*se esse texto muito grande 
+    aparecesse em dispositivos muito pequenos, iria quebrar*/
+    inline-size: 100%;
+    overflow-wrap: break-word;
+
+}
+.gridItem-navPanelLateral p
+{
+    color:yellow;
+    font-family: RetroGaming,Arial;
+    font-size: 20px;
+    text-align: center;
+}
+.gridItem-navPanelLateral ul
+{
+    list-style: none;
+    padding-left:4px;
+    padding-bottom: 1px;
+    margin:0px;
+}
+.gridItem-navPanelLateral ul li
+{
+    padding:10px 10px;
+    margin:2px 0px;
+    color:yellow;
+    font-family: RetroGaming,Arial;
+    border: 2px solid black;
+    background-color: rgb(118, 50, 167);
+}
+
+
+.gridItem-navPanelLateral ul li:hover,#botao-hyperlink-voltar-ao-topo:hover
+{
+    border: 3px solid black;
+    transition:.2s; /*isso vai me dar um efeito de piscada ao ficar com mouse em cima de algum elemento*/
+}
+
+.gridItem-navPanelLateral ul li a, #botao-hyperlink-voltar-ao-topo a
+{
+    text-decoration: none;
+    color:yellow;
+    inline-size: 100%;
+    overflow-wrap: break-word;
+}
+.gridItem-navPanelLateral ul li a:hover,#botao-hyperlink-voltar-ao-topo a:hover
+{
+    border-bottom: 2px solid yellow;
+    transition:.2s; /*isso vai me dar um efeito de piscada ao ficar com mouse em cima de algum elemento*/
+}
+
+#botao-hyperlink-voltar-ao-topo
+{
+    padding:10px;
+    margin:10px 0px;
+    color:yellow;
+    font-family: RetroGaming,Arial;
+    border: 2px solid black;
+    background-color: rgb(205, 65, 165);
+}
+
+/*coisas do texto resto da pag*/
+h4
+{
+    color:yellow;
+    font-family: RetroGaming,Arial;
+    font-size: 40px;
+    text-align:center;
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+#textoDescricao
+{
+    color:yellow;
+    text-align: center;
+    font-family: RetroGaming,Arial;
+    font-size: 24px;
+    margin-left:15px;
+    max-width:90%;
+}
+
+.textoSecaoPortfolio
+{
+    color:yellow;
+    text-align: center;
+    font-family: RetroGaming,Arial;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+/*coisas dos cards*/
+.cards
+{
+    width:100%;
+    display:flex; /*vira flex container*/
+    flex-direction:row;/*will adjust components so they will be displayed horizontally*/
+    justify-content:center;/*cartoes centralizados*/
+    flex-wrap: wrap;
+}
+
+.card {
+    align-self:center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+    width:250px; /*I can adjust width and heigh of a card*/
+    height:auto; /*antes era 200px*/ 
+    box-shadow: 1px 1px 10px #000;
+    background:linear-gradient(0deg,#CCFFFF,#CCCCFF);
+    position:relative; /*this will be only useful for the animation*/
+
+    display:flex; /*vira flex container*/
+    flex-direction:column;/*will adjust components so they will be displayed horizontally*/
+    justify-content:center;/*cartoes centralizados*/
+}
+
+.card:hover
+{
+    /*quando accessado no browser, os cards vao ficar um pouco maiores
+    quando mouse ficar em cima*/
+    transform: scale(1.03); /*aumenta tamanho*/
+    transition:.3s; /*ao inves de ser imediato, a transicao vai demorar um pouco*/
+}
+
+.tituloCard a, .descricaoCard a
+{
+    text-decoration: none;
+}
+
+.tituloCard
+{
+    background-color:rgb(250, 247, 204);
+    font-family: RetroGaming,Arial;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    margin: -4px -4px -20px -4.5px;
+    padding-left:10px;
+    padding-right: 10px;
+    border-radius: 5px 5px 0px 0px; /*first value applies to top-left corner, second value applies to top-right corner, third value applies to bottom-right corner, and fourth value applies to bottom-left corner*/
+    color:rgb(43, 226, 58);
+}
+
+.tituloCard a,.tituloCard a:visited
+{
+    color:#c92ae6;
+}
+
+.descricaoCard
+{
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-grow: 3; /*faz a descricao ocupar quase todo o card*/
+    /*tive de transformar a descricao em um flex apenas para tornar o texto todo centralizaod usando o abaixo*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descricaoCard a,.descricaoCard a:visited
+{
+    color:indigo;
+}
+
+footer ul
+{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    gap:20px;
+    padding:0;
+}
+
+footer ul a
+{
+    width: 15px;
+    height: 15px;
+    border: solid 1px #000;
+    padding:10px;
+    border-radius: 50%; /*qd colocamos 50%, garantimos que vai ser um circulo*/
+    /*coisas abaixo sao apenas para garantir que as imagens 
+    sempre ficarao alinhadas no centro*/
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*breakpoints*/
+@media (max-width: 900px) 
+{
+    /*o que vou fazer em telas de tamanho pequeno,
+    tipo no celular!
+    */
+    #textoDescricao
+    {
+        font-size: 4vw;/*era 18px*/
+    }
+    .gridItem-navPanelLateral ul li,#botao-hyperlink-voltar-ao-topo
+    {
+        font-size: 10px;
+    }
+    
+    .cards
+    {
+        flex-direction: column;
+        justify-content: center;
+        gap:20px;
+        padding: 20px; /*apenas em cima e em baixo*/
+        width:auto;
+        flex-wrap: wrap; /*no celular, eu quero que os itens estejam um em cada linha, se n tiver espaco, passa para baixo*/
+    }
+}
+
+@media (max-width: 380px) 
+{
+    #navPanelLateralTitulo
+    {
+        font-size: 3vw;
+    }
+    #textoDescricao
+    {
+        font-size: 3vw;
+    }
+
+    .gridItem-navPanelLateral ul li,#botao-hyperlink-voltar-ao-topo
+    {
+        font-size: 10px;
+    }
+
+    .card
+    {
+        width:200px;
+    }
+
+    .tituloCard
+    {
+        font-size: 15px;
+    }
+}
+

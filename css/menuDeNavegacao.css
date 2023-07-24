@@ -1,0 +1,164 @@
+/*aqui neste css teremos algo que vai afetar um menu que pode aparecer em multiplas
+paginas html, nao apenas o index, por isso colocamos tudo separado aqui*/
+
+@font-face 
+{
+    font-family: BetterPixels;
+    src: url("../fontes/BetterPixels.ttf");
+    /*declarei uma fonte nova para ser usada. Obs: nao funciona no firefox!*/
+}
+@font-face 
+{
+    font-family: RetroGaming;
+    src: url("../fontes/RetroGaming.ttf");
+    /*declarei uma fonte nova para ser usada. Obs: nao funciona no firefox!*/
+}
+
+/*coisas de navbar*/
+.navbar-mobile
+{
+    display:none; /*isso vai mudar em telas menores*/
+}
+
+.flexContainer-navbar
+{
+    display: flex; /*criei meu flex container*/
+    flex-direction: row;
+    justify-content: space-between; /*como tenho apenas 2 elementos, cada um vai para uma ponta*/
+    padding: 20px 40px; /*20 pixels em ciam e baixo e 40 nas laterais*/
+    /*background-color: #5c5cd7;*/
+    background-color: rgb(40,16,112);
+    align-items:center; /*os 2 items vao ficar verticalmente alinhados*/
+    width:100%;
+
+}
+
+.flexContainer-nav-menu
+{
+    list-style: none; /*tirei os bullets da minha lista*/
+    display: flex; /*minha lista bt vai ser um container*/
+    flex-direction: row;
+    gap:15px; /*separa os items*/
+}
+
+.textoDonav-menu
+{
+    color:rgb(237, 174, 207);
+    font-weight: bolder;
+    font-size: 18px;
+    font-family: RetroGaming,Arial;
+}
+
+.textoDonav-menu a
+{
+    text-decoration: none; /*tirei linhas dos links*/
+}
+
+.textoDonav-menu a:visited
+{
+    color:rgb(249, 128, 195);
+}
+
+.textoDonav-menu a:hover
+{
+    color:rgb(240, 159, 201);
+    border-bottom: 2px solid rgb(240, 159, 201);
+    transition:.2s; /*isso vai me dar um efeito de piscada ao ficar com mouse em cima de algum elemento*/
+}
+
+/*coisas para tela de celular*/
+@media (max-width: 768px) 
+{
+    .flexContainer-navbar
+    {
+        width:100%;
+        margin: -8px; /*por default, o body tem uma margin...o menu devia burlar essa margin*/
+    }
+
+    #textoDescricao
+    {
+        width:99%;
+    }
+
+    /*o que vou fazer em telas de tamanho pequeno,
+    tipo no celular! Vai ficar a imagem em cima e o
+    navbar vai se tornar hamburguer
+    */
+
+    .navbar-desktop
+    {
+        display:none;
+    }
+
+    .navbar-mobile
+    {
+        display:block; /*fiz isso porque no normal ele fica display none
+        (desktop) entao aqui ele deveria aparecer*/
+    }
+
+    .botao-close-menu-mobile,.botao-menu-hamburguer
+    {
+        border:none;
+        /*coisas para fazer os dois icones ficar na mesma posicao*/
+        position:absolute;
+        top:20px;
+        right:20px;
+        width:36px;
+        height:36px;
+    }
+
+    .navbar-mobile-list
+    {
+        background-color: rgb(40,16,112);
+        position:absolute; /*pois meu menu vai ficar em uma posicao fixa na frente da pag*/
+        z-index: 500;/*necessario visto que meu menu deve ficar por cima de tudo que estiver na pag*/
+        /*500 foi apenas um valor bem grande para ser usado*/
+        top:0;
+        left:0; /*com isso e o acima eu defino a posicao de partida do meu menu*/
+        width:100%;
+        height: 50%; /*nesse caso, significa que eu quero que o menu ocupe 50% da tela*/
+        overflow:hidden;/*serve para caso tenha algum elemento saindo da tela, para nao gerar um scroll lateral*/
+        
+        list-style: none;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding:0px;
+        font-weight: 800;
+        align-items: center; /*vai centralizar os componentes horizontalmente*/
+        justify-content: space-evenly; /*Deixa os elementos o mais no centro possível, mas com espaço igualmente entre eles*/
+        transform: translateY(-100%); /*isso significa que por default esse menu todinho vai ficar na posicao -100%, ou seja,
+        invisivel na tela*/
+        transition: .6s; /*a animacao definida acima vai levar um tempo para acontecer, nao acontece instantaneamente*/
+    }
+
+    .navbar-mobile-list:target
+    {
+        transform: translateY(0); /*quando o alvo for acionado, ou seja, quando o botao hamburguer for apertado,meu
+        menu todinho vai ficar na posicao Y sendo 0, o que significa que ele vai reaparecer*/
+    }
+
+    .textoDonav-menumobile
+    {
+        display:block;
+        font-weight: 800;
+        font-size: 1.2rem; /*deixo um pouco maior por conta do celular*/
+        width:100%;
+        padding:10px; /*para eles ficarem como botoes cheiinhos*/
+        text-align: center; /*cada item da minha lista vai ficar com texto mais no meio*/
+        font-family: RetroGaming,Arial;
+    }
+
+    .textoDonav-menumobile a
+    {
+        text-decoration: none;/*tirei linhas dos links*/
+    }
+    .textoDonav-menumobile a:not(:visited)
+    {
+        color:rgb(237, 174, 207);
+    }
+    .textoDonav-menumobile a:visited
+    {
+        color:rgb(249, 128, 195);
+    }
+}

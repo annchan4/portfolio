@@ -1,0 +1,101 @@
+.anuncioParaOQueVemAdiante
+{
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto; /*isso serve para centralizar coisas no container
+    de tamanho fixo*/
+    padding:0px 5px;
+}
+
+.obs
+{
+    color:red;
+    font-size:0.8rem;
+    text-align: center;
+}
+
+body
+{
+    padding-top:0;
+    margin-right: 0;
+    margin-left:0;
+}
+
+.flex-menu
+{
+    display:flex; 
+    flex-direction: row; /*itens devem ficar na mesma linha*/
+    padding:20px 0; /*cima e baixo 20px de distancia*/
+    justify-content: center;
+    gap: 10px;
+    background-color: brown;
+    position:fixed;
+    top:30;
+    width:100%; /*sem isso, o menu nao ocupa uma linha inteira, por mais que seja uma div...isso foi culpa do position fixed*/
+    z-index: 10; /*para o menu ficar na frente de todos os outros elementos*/
+}
+
+.flex-menu li
+{
+    list-style: none;
+    font-size:18px;
+    color:white;
+}
+
+.parag-1
+{
+    margin-top:90px; /*apenas para esse paragrafo nao ficar por baixo do menu*/
+}
+
+.icone-whatsapp
+{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+}
+
+.box
+{
+    width:90%;
+    margin:0 auto; /*apenas para centralizar*/
+    border: solid 2px black;
+    height:150px;
+}
+
+.box-inside
+{
+    width:50px;
+    height:50px;
+    background-color: aqua;
+}
+
+.relative
+{
+    position:relative;
+    top:30px;
+    left:20px;
+}
+
+.box-absolute
+{
+    width:150px;
+    height:250px;
+    background-color: aqua;
+    position:absolute;
+    right:10px;
+    top:50%;
+}
+
+.m-bottom
+{
+    margin-bottom:2000px;
+}
+
+.relative-negativo
+{
+    position:relative;
+    left:-20px;
+    z-index: -1;
+}

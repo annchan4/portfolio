@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Exemplos eventListener</title>
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <br/>
+    <br/>
+    <p class="anuncioParaOQueVemAdiante">-> Mova seu cursor para dentro do input para ver uma mudança </p>
+    <p class="anuncioParaOQueVemAdiante">-> Deixe campo em branco e aperte enter, escreva algo e aperte enter</p>
+    <p class="anuncioParaOQueVemAdiante">-> Clique com botão direito no botão abaixo (não vai aparecer context menu, diferente do padrão)</p>
+    <br/>
+    <div id="localParaInserirNovosElementosViaJavascript"></div>
+    <input type="text" id="myInput"/>
+    <button id="clickButton">Clique com botão direito</button>
+    <p id="textoFicaAtualizandoACada3Segs">Quantos segundos já se passaram:0</p>
+    <p class="anuncioParaOQueVemAdiante">-> Botei um eventlistener para keyup no input abaixo, mas graças ao debouncing, não irei executar keyup toda vez que apertar uma tecla, apenas quando você deixar de escrever algo é que o texto vai aparecer</p>
+    <br/>
+    <div><p id="areaTextoDoInput"></p></div>
+    <input type="text" id="inputFazTextoAparecerAcima" placeholder="escreva algo e depois fique sem escrever"/>
+</body>
+</html>
+<script src="javascript/scripts.js"></script>

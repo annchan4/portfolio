@@ -1,0 +1,154 @@
+.divEnglobaTudo
+{
+    /*apenas para que em telas muito pequenas os itens n fiquem cortando*/
+    max-width: 100%;
+}
+
+p
+{
+    font-weight: bold;
+}
+
+.anuncioParaOQueVemAdiante
+{
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+
+.obs
+{
+    color:red;
+    font-size:0.8rem;
+}
+
+.flex
+{
+    display: flex; /*faz o elemento virar flex container e seus filhos 
+    flex items (que ocupam apenas a largura dos seus conteúdos)*/
+    border: 3px solid black;
+    background-color: #4e57ff4f;
+    margin:50px 20px; /*50px em cima e baixo e 20 nas laterais*/
+    flex-direction: row; /*faz todos os elementos do container ficarem mostrados em linha(depois veremos colunas)*/
+    max-width: 100%;
+}
+.item
+{
+    padding: 25px;/*cima, baixo, esq e direita*/
+    background-color: #8389fe;
+    border: 3px solid #df4318;
+    margin:0;
+    font-size:24px;
+    font-weight: bolder;
+    color:white;
+}
+.justifyContentSpaceAround
+{
+    justify-content: space-around; /*igualmente divide os espacos vazios ao redor dos elementos*/
+}
+.justifyContentSpaceBetween
+{
+    justify-content: space-between; /*igualmente divide os espacos vazios ao redor dos elementos,
+    mas para o primeiro e o ultimo elemento, vai deixar eles coladinhos nas laterais*/
+}
+.justifyContentSpaceEvenly
+{
+    justify-content: space-evenly; /*Deixa os elementos o mais no centro possível, mas com espaço igualmente entre eles*/
+}
+.justifyContentCenter
+{
+    justify-content: center; /*Tudo fica no centro,coladinho e os espaços em branco ficam ao redor*/
+}
+.justifyContentStart
+{
+    justify-content: start; /*Tudo fica coladinho e na esq do container*/
+}
+.justifyContentEnd
+{
+    justify-content: end; /*Tudo fica coladinho e na dir do container*/
+}
+
+.flexDoGap
+{
+    gap:20px; /*Todos os flex items vão ter um espaçamento de 20px entre eles*/
+}
+
+.item2
+{
+    padding: 40px 25px;/*cima e baixo, e esq e direita*/
+    background-color: #8389fe;
+    border: 3px solid #df4318;
+    margin:0;
+    font-size: 24px;
+    font-weight: bolder;
+    color:white;
+}
+
+.flexDoAlignItemsCenter
+{
+    align-items: center;/*O conteúdo dos items vai estar centralizado, independente do tamanho dos mesmos... não vai stretch o tamanho, inclusive*/
+}
+
+.flexDoAlignItemsFlexEnd
+{
+    align-items: flex-end;/*Mesmo que o center, mas faz os items ficarem alinhados na base do container*/
+}
+
+.flexDoAlignItemsFlexStart
+{
+    align-items: flex-start;/*Mesmo que o flex-end, mas faz os items ficarem alinhados no topo do container*/
+}
+
+.flexWrapNowrap
+{
+    flex-wrap: nowrap;
+}
+
+.flexWrapWrap
+{
+    flex-wrap: wrap;/*Quando não tiver mais espaço em uma linha, passa os items para outra linha*/
+}
+
+/*breakpoints*/
+@media(max-width: 950px)
+{
+    .item,.item2
+    {
+        font-size: 12px;
+        padding: 9px;/*cima, baixo, esq e direita*/
+    }
+
+    .item2
+    {
+        font-size: 12px;
+        padding:24px 9px;
+    }
+    .flexDoGap
+    {
+        gap:5px;
+    }
+}
+
+@media(max-width: 576px)
+{
+    .item,.item2
+    {
+        font-size: 9px;
+        padding: 6px;/*cima, baixo, esq e direita*/
+    }
+
+    .item2
+    {
+        font-size: 9px;
+        padding:24px 9px;
+    }
+    .flexDoGap
+    {
+        gap:5px;
+    }
+
+    .flexWrapNowrap
+    {
+        width:80%;
+    }
+}

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Tabelas</title>
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+    <p>Tabela estilizada</p>
+    <table id="tabela1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Maria</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>25</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total das idades</td>
+                <td>45</tr>
+            </tr>
+        </tfoot>
+    </table>
+
+    <p>Tabela borda branca</p>
+    <table id="tabela2">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Maria</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>25</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total das idades</td>
+                <td>45</tr>
+            </tr>
+        </tfoot>
+    </table>
+
+    <p>Tabela na horizontal</p>
+    <table id="tabela3">
+        <tr>
+            <th>Nome</th>
+            <td>Maria</td>
+            <td>Joao</td>
+            <td>Pedro</td>
+        </tr>
+        <tr>
+            <th>Idade</th>
+            <td>20</td>
+            <td>15</td>
+            <td>30</td>
+        </tr>
+    </table>
+
+    <p>Células ocupam mais de uma coluna</p>
+    <p class="obs">Que tal ficar com o cursor em cima 
+        de uma das celulas? Vai ter uma supresa!</p>
+    <table id="tabela4">
+        <thead>
+            <tr>
+                <th colspan="7">Junho</th>
+            </tr>
+            <tr>
+                <th>Segunda</th>
+                <th>Terça</th>
+                <th>Quarta</th>
+                <th>Quinta</th>
+                <th>Sexta</th>
+                <th>Sábado</th>
+                <th>Domingo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Células ocupam mais de uma linha</p>
+    <p class="obs">Usei uma pseudoclasse para pintar a linha inteira,seja ela formada por headers ou células</p>
+    <table id="tabela5">
+        <tr>
+            <th>Escola</th>
+            <td>Escola1</td>
+            <td>Escola2</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telefone</th>
+            <td>9999-99999</td>
+            <td>9999-99999</td>
+        </tr>
+        <tr>
+            <td>9999-99999</td>
+            <td>9999-99999</td>
+        </tr>
+        
+    </table>
+
+    <p>colgroup - destacando colunas</p>
+    <table id="tabela6">
+        <colgroup>
+            <col span="2" id="colgroup-colunas1">
+            <col span="1">
+            <col span="1" id="colgroup-colunas2">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Telefone</th>
+                <th>Endereço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pedro</td>
+                <td>20</td>
+                <td>9999-99999</td>
+                <td>R 17</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>20</td>
+                <td>9999-99999</td>
+                <td>R 17</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>20</td>
+                <td>9999-99999</td>
+                <td>R 17</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>20</td>
+                <td>9999-99999</td>
+                <td>R 17</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>20</td>
+                <td>9999-99999</td>
+                <td>R 17</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>estilizando apenas linhas pares</p>
+    <table id="tabela7">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Telefone</th>
+                <th>Endereço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pedro</td>
+                <td>20</td>
+                <td>9999-99999</td>
+                <td>R 17</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>20</td>
+                <td>9999-99999</td>
+                <td>R 17</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>20</td>
+                <td>9999-99999</td>
+                <td>R 17</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>20</td>
+                <td>9999-99999</td>
+                <td>R 17</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>20</td>
+                <td>9999-99999</td>
+                <td>R 17</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <section>
+    <!--apenas alguns testes com tabelas, nada de novo-->
+    <p>Tabela de cores variadas</p>
+    <table id="tabela8">
+    <tr>
+        <th>coluna1</th>
+        <th>coluna2</th>
+        <th>coluna3</th>
+        <th>coluna4</th>
+    </tr>
+    <tr>
+        <td>Item 1</td>
+        <td>Descrição</td>
+        <td>Descrição</td>
+        <td>Descrição</td>
+    </tr>
+    <tr>
+        <td>Item 2</td>
+        <td>Descrição</td>
+        <td>Descrição</td>
+        <td>Descrição</td>
+    </tr>
+    <tr>
+        <td>Item 3</td>
+        <td>Descrição</td>
+        <td>Descrição</td>
+        <td>Descrição</td>
+    </tr>
+    <tr>
+        <td>Item 4</td>
+        <td>Descrição</td>
+        <td>Descrição</td>
+        <td>Descrição</td>
+    </tr>
+    </table>
+
+    <p>Tabela com borda apenas nas rows(linhas) e linhas selecionáveis</p>
+    <table id="tabela9">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Primeiro nome</th>
+        <th>Sobrenome</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>José</td>
+        <td>da Silva</td>
+        <td>jose@email.com</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Maria</td>
+        <td>Oliveira</td>
+        <td>maria@email.com</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Carla</td>
+        <td>Santos</td>
+        <td>carla@email.com</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Julia</td>
+        <td>Costa</td>
+        <td>julia@email.com</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Sergio</td>
+        <td>Santana</td>
+        <td>sergio@email.com</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <p>Tabela com algumas celulas maiores que outras, algumas estilizadas e botoes redondos</p>
+    <p class="obs">Obs: Tente posicionar o cursor em cima dos botões para uma surpresa! (transparência)</p>
+    <table id="tabela10">
+    <thead>
+    <tr>
+        <th></th>
+        <th>Básico</th>
+        <th>Padrão</th>
+        <th>Avançado</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>Preço Mensal</th>
+        <th class="textoPrecoGrande basico">$ 29</th>
+        <th class="textoPrecoGrande padrao">$ 59</th>
+        <th class="textoPrecoGrande avancado">$ 99</th>
+    </tr>
+    <tr>
+        <td>Tv</td>
+        <td>50 canais</td>
+        <td>100 canais</td>
+        <td>199 canais</td>
+    </tr>
+    <tr>
+        <td>Internet</td>
+        <td>20mb</td>
+        <td>50mb</td>
+        <td>200mb</td>
+    </tr>
+    <tr>
+        <td>Telefone</td>
+        <td>50 minutos</td>
+        <td>100 minutos</td>
+        <td>Ilimitado</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button class="basico">Escolher esse plano</button></td>
+        <td><button class="padrao">Escolher esse plano</button></td>
+        <td><button class="avancado">Escolher esse plano</button></td>
+    </tr>
+    </tbody>
+    </table>
+
+    </section>
+
+</body>
+</html>

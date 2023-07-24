@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Listas</title>
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+    <ul id="listaMenuDeNavegacao">
+        <li>Home</li>
+        <li>Produtos</li>
+        <li>Contato</li>
+        <li>Sobre</li>
+    </ul>
+
+    <p>Lista ordenada</p>
+    <ol class="listaOrdenada">
+        <li>Maçã</li>
+        <li>Limão</li>
+        <li>Laranja</li>
+        <li>Abacaxi</li>
+    </ol>
+    <p>Lista não-ordenada com imagens personalizadas</p>
+    <ul class="listaNaoOrdenada">
+        <li>Boneca</li>
+        <li>Bubaloo</li>
+        <li>Tazo</li>
+        <li>Snes</li>
+    </ul>
+    <p>Lista reversa, que inicia em outro num e com um item de valor específico</p>
+    <ol start="2" reversed>
+        <li>Frutas</li>
+        <li value="3">Legumes</li>
+        <li>Carne</li>
+        <li>Tempero</li>
+    </ol>
+    <p>Lista dentro de lista</p>
+    <ol>
+        <li>Frutas
+            <ol>
+                <li>Banana</li>
+                <li>Caju</li>
+                <li>Melancia</li>
+            </ol>
+        </li>
+        <li>Legumes</li>
+        <li>Carne</li>
+        <li>Tempero</li>
+    </ol>
+
+
+</body>
+</html>

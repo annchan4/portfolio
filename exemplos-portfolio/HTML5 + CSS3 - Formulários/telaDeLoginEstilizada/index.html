@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Tela de login</title>
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="pagina-toda">
+        <div>
+            <img src="img/annchan4LogoSmall.png" alt="logo annchan4">
+        </div>
+        <div class="div-acesse-sua-conta">
+            <h2 class="tituloAcesseASuaConta">Acesse a sua conta</h2>
+            <form class="flex-formulario">
+                <label for="cpfOuEmail">CPF ou Email</label>
+                <input type="text" id="cpfOuEmail" name="cpfOuEmail" placeholder="CPF ou Email" required/>
+
+                <div class="senhaEEsqueciSenha">
+                <label for="senha">Senha</label>
+                <a href="#">Esqueci a senha</a>
+                </div>
+                <div class="senhaESeuIcone">
+                    <input type="password" id="senha" name="senha" placeholder="Senha" required/>
+                    <img src="img/eye-icon.svg" alt="icone olho"/>
+                </div>
+                <input type="submit" id="entrar" name="entrar" value="Entrar na minha conta">
+                <div class="ouESeusTracos"><hr><span>Ou</span><hr></div>
+                <div class="botaoLoginEIconeGoogle">
+                    <img src="img/google-icon.svg" alt="icone google"/>
+                    <a href="#">Fazer login com o Google</a>
+                </div>
+            </form>
+        </div>
+        <div>
+            <div class="naoTemUmaConta">
+                <p>Não tem uma conta? Veja </p><a href="#">nossos planos</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

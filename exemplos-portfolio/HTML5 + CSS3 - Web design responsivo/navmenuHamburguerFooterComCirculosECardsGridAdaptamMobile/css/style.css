@@ -1,0 +1,347 @@
+.anuncioParaOQueVemAdiante
+{
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto; /*isso serve para centralizar coisas no container
+    de tamanho fixo*/
+    padding:0px 5px;
+}
+
+.obs
+{
+    color:red;
+    font-size:0.8rem;
+    text-align: center;
+}
+
+html,body
+{
+    /*vou remover margin e padding que por default jah
+    vem com a pagina:*/
+    margin: 0;
+    padding: 0;
+}
+
+.container
+{
+    max-width: 900px;
+    margin: 0 auto; /*isso serve para centralizar coisas no container
+    de tamanho fixo*/
+    padding: 0 20px;
+}
+
+/*header*/
+header
+{
+    background-color: black;
+    color:white;
+    padding:20px 0;
+}
+
+header ul li
+{
+    cursor: pointer;
+    border-bottom: solid 2px #000;
+}
+
+header ul li:hover
+{
+    /*quando o mouse estiver em cima...*/
+    border-bottom: solid 2px #fff;
+    transition: .6s; /*a linha nao vai aparecer imediatamente, vai ter um tempo de transicao*/
+}
+
+.menu-mobile
+{
+    display:none; /*por default, esse menu n vai aparecer, mas em telas menores ele vai reaparecer*/
+}
+
+.flex-nav-menu
+{
+    display:flex;
+    flex-direction: row; /*itens em linha*/
+    justify-content: space-between; /*flex-list e flex-search-field vao 
+    ficar bem separadinhos, pois sao os unicos filhos desse flex*/
+    align-items: center;
+}
+
+.flex-list
+{
+    list-style: none; /*tirei os bullets*/
+    display:flex;
+    flex-direction: row; /*itens em linha*/
+    gap: 20px;
+    font-weight: 800;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.flex-search-field
+{
+    /*engloba flex-search-area e o button*/
+    display:flex;
+    flex-direction: row; /*itens em linha*/
+    gap:10px;
+}
+
+.flex-search-area
+{
+    /*engloba a imagem e o input*/
+    display:flex;
+    flex-direction: row; /*itens em linha*/
+    align-items: center;
+    background-color: white;
+    padding:10px;
+    border-radius:7px; /*laterais arredondadas*/
+    gap:10px;
+}
+
+.flex-search-area input
+{
+    border:none; /*meu input nao vai ter nenhuma borda, 
+    causando a impressao de que ele se mesclou com o 
+    flex-search-field apenas porque essa div eh branca assim como
+    o background do input*/
+    width:100%; /*para garantir que o input nao vai sair de dentro
+    do elemento que o envolve, mesmo em telas muito pequenas...
+    achei meio inutil, mas pode ser porque meu celular eh grande*/
+}
+
+.flex-search-area input:focus
+{
+    /*isso vai servir para quando o input for selecionado ele
+    nao deve voltar a ter borda*/
+    outline:none;
+}
+
+.flex-search-field button
+{
+    padding: 0 20px; /*apenas nas laterais*/
+    background-color: transparent; /*meu botao vai ter cor transparente*/
+    color: #5252e2;
+    border:solid 2px #5252e2; /*isso faz o contorno do botao mudar de cor*/
+    font-weight: 900;
+    font-size: .7rem; /*Relativa ao tamanho da fonte definido na raiz*/
+    border-radius:7px; /*laterais arredondadas*/
+}
+
+/*coisas da section conteudo-principal*/
+.conteudo-principal
+{
+    text-align: center;
+    padding: 50px 0; /*50 em cima e baixo e 0 nnas laterais*/
+}
+
+.conteudo-principal h1
+{
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.conteudo-principal p
+{
+    font-size: 24px;
+    font-weight: 100;
+    max-width: 500px;
+    margin: 0 auto; /*para centralizar meu texto*/
+}
+
+.buttons-field
+{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    gap: 20px;
+    margin-top:30px;
+}
+
+.button-blue
+{
+    padding:10px 40px; /*faz botao ficar mais largo*/
+    font-size:14px;
+    font-weight: 900;
+    color:white;
+    border-radius: 7px;
+    border:none;
+    cursor:pointer; /*mouse em cima do botao, vai mudar, como em links*/
+    background-color: #5252e2;
+}
+.button-gray
+{
+    padding:10px 40px; /*faz botao ficar mais largo*/
+    font-size:14px;
+    font-weight: 900;
+    color:white;
+    border-radius: 7px;
+    border:none;
+    cursor:pointer; /*mouse em cima do botao, vai mudar, como em links*/
+    background-color: #8d8a8a;
+}
+.button-blue:hover,.button-gray:hover
+{
+    transform: scale(1.05);
+    transition: .6s;
+}
+
+/*coisas da section galeria-fotos*/
+.galeria-fotos
+{
+    background-color: #eeeeee;
+    padding:50px 0; /*cima e baixo apenas*/
+}
+
+.grid-cards
+{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr); /*3 colunas de mesmo tamanho*/
+    row-gap:50px;
+    column-gap: 30px;
+    margin-top: 10px;
+}
+.card
+{
+    background-color: #fff;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.424);
+    padding:10px;
+}
+
+/*footer*/
+footer
+{
+    padding: 50px 0;
+}
+
+footer p
+{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+footer ul
+{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    gap:20px;
+    padding:0;
+}
+
+footer ul a
+{
+    width: 15px;
+    height: 15px;
+    border: solid 1px #000;
+    padding:10px;
+    border-radius: 50%; /*qd colocamos 50%, garantimos que vai ser um circulo*/
+    /*coisas abaixo sao apenas para garantir que as imagens 
+    sempre ficarao alinhadas no centro*/
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*breakpoints*/
+@media(max-width:992px)
+{
+    .grid-cards
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width: 600px)
+{
+    header
+    {
+        padding: 35px 0; /*cima e baixo 35px e nada nas laterais*/
+    }
+
+    .flex-nav-menu
+    {
+        display:none; /*em telas pequenas, esse menu nao vai aparecer,em
+        vez disso vamos ficar apenas com o mobile*/
+    }
+
+    header
+    {
+        padding: 35px 0; /*cima e baixo 35px e nada nas laterais*/
+    }
+
+    .menu-mobile
+    {
+        display:block; /*fiz isso porque no normal ele fica display none
+        (desktop) entao aqui ele deveria aparecer*/
+    }
+
+    .botao-close-menu-mobile,.botao-menu-hamburguer
+    {
+        border:none;
+        cursor:pointer; /*icone do mouse muda quando em desktop*/
+        /*coisas para fazer os dois icones ficar na mesma posicao*/
+        position:absolute;
+        top:20px;
+        right:20px;
+        width:36px;
+        height:36px;
+    }
+
+    .navbar-mobile
+    {
+        background-color: #000;
+        position:absolute; /*pois meu menu vai ficar em uma posicao fixa na frente da pag*/
+        z-index: 500;/*necessario visto que meu menu deve ficar por cima de tudo que estiver na pag*/
+        /*500 foi apenas um valor bem grande para ser usado*/
+        top:0;
+        left:0; /*com isso e o acima eu defino a posicao de partida do meu menu*/
+        width:100%;
+        height: 50%; /*nesse caso, significa que eu quero que o menu ocupe 50% da tela*/
+        overflow:hidden;/*serve para caso tenha algum elemento saindo da tela, para nao gerar um scroll lateral*/
+        
+        list-style: none;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding:0px;
+        font-weight: 800;
+        align-items: center; /*vai centralizar os componentes horizontalmente*/
+        justify-content: space-evenly; /*Deixa os elementos o mais no centro possível, mas com espaço igualmente entre eles*/
+        transform: translateY(-100%); /*isso significa que por default esse menu todinho vai ficar na posicao -100%, ou seja,
+        invisivel na tela*/
+        transition: .6s; /*a animacao definida acima vai levar um tempo para acontecer, nao acontece instantaneamente*/
+    }
+
+    .navbar-mobile:target
+    {
+        transform: translateY(0); /*quando o alvo for acionado, ou seja, quando o botao hamburguer for apertado,meu
+        menu todinho vai ficar na posicao Y sendo 0, o que significa que ele vai reaparecer*/
+    }
+
+    .navbar-mobile li
+    {
+        display:block;
+        color:#fff;
+        font-weight: 800;
+        font-size: 1.2rem; /*deixo um pouco maior por conta do celular*/
+        width:100%;
+        padding:10px; /*para eles ficarem como botoes cheiinhos*/
+        text-align: center; /*cada item da minha lista vai ficar com texto mais no meio*/
+    }
+
+    .navbar-mobile li a:visited
+    {
+        color:#5252e2;
+    }
+    .navbar-mobile li a:not(:visited)
+    {
+        color:white;
+    }
+
+    .grid-cards
+    {
+        grid-template-columns: 1fr;
+    }
+}

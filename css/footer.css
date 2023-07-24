@@ -1,0 +1,36 @@
+footer
+{
+    padding: 50px 0;
+}
+
+footer p
+{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+footer ul
+{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    gap:20px;
+    padding:0;
+}
+
+footer ul li
+{
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border: solid 1px #000;
+    padding:10px;
+    border-radius: 50%; /*qd colocamos 50%, garantimos que vai ser um circulo*/
+    /*coisas abaixo sao apenas para garantir que as imagens 
+    sempre ficarao alinhadas no centro*/
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

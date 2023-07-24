@@ -1,0 +1,73 @@
+p
+{
+    font-weight: bold;
+    color:red;
+}
+.obs
+{
+    color:red;
+    font-size:0.8rem;
+}
+
+#elementopressionavel:active
+{
+     /*enquanto estiver pressionado,elemento deste id vai...*/
+     color:greenyellow;
+}
+#elementohover:hover
+{
+    /*enquanto mouse estiver em cima do elemento...*/
+    color:greenyellow;
+}
+input[type="checkbox"]:checked + span
+{
+    /*vou fazer algo com o span que vem exatamente apos um input checkbox*/
+    /*ele vai mudar de cor ao ficar checked*/
+    color:red;
+}
+input[type="text"]:disabled
+{
+    /*se um input do tipo text estiver desabilitado...*/
+    background-color: blanchedalmond;
+}
+input[type="text"]:focus
+{
+    /*toda vez que um input text estiver com foco(clicou nele,
+    ele recebe foco)*/
+    background-color: cornflowerblue;
+}
+h1:empty
+{
+    /*todos os h1 que estiverem sem nenhum texto, texto vazio*/
+    border:red solid 1px;
+}
+#minhalista > li:first-child
+{
+    /*li dentro da ul minhalista que eh primeiro filho*/
+    color:greenyellow;
+}
+#minhalista > li:last-child
+{
+    /*li dentro da ul minhalista que eh ultimo filho*/
+    color:coral;
+}
+#minhalista > li:nth-child(3)
+{
+    /*li dentro da ul minhalista que eh nth filho*/
+    color:aqua;
+}
+#minhalista > li:nth-child(even)
+{
+    /*filhos pares*/
+    background-color: aqua;
+}
+#minhalista >li:not(even)
+{
+    /*filhos que nao sao pares, ou seja, odd*/
+    background-color:coral;
+}
+#minhalista >li:not(:hover)
+{
+    /*afeta os li da ul minhalista que sempre que eu NAO estiver hover eles*/
+    font-style: italic;
+}

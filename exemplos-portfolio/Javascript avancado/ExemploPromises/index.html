@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Exemplo de uso de Promises</title>
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar px-0 mx-0">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <h1 style="margin-top: 10px;">Exemplo de uso de Promises</h1>
+    <p>No código abaixo, eu exemplifico o uso de Promises com (i) Um método que escreve uma introdução, (ii) Outro que pergunta algo, (iii) Outro que responde</p>
+    <p>Inspecione essa pagina e abra o terminal para ver o código abaixo funcionando</p>
+    
+    <pre>
+        <code>
+class ComecoDeConversa
+{
+    constructor(name)
+    {
+        this.name = name;
+    }
+
+    introduzirApos2Segundos(introducao,resolve)
+    {
+        setTimeout(this.introduzir.bind(this),2000,introducao,resolve);
+    }
+    introduzir(introducao,resolve)
+    {
+        console.log(introducao + " " + this.name);
+        var numAleatorio1A3 = Math.trunc((Math.random() * 3) + 1);
+        if(numAleatorio1A3 == 1)
+        {
+            resolve("Qual o seu nome?");
+        }
+        else if(numAleatorio1A3 == 2)
+        {
+            resolve("O que gosta de fazer?");
+        }
+        else
+        {
+            resolve("Trabalha ou estuda?");
+        }
+    }
+
+    perguntarAlgoApos2Segundos(algoAPerguntar,resolve)
+    {
+        setTimeout(this.perguntarAlgo,2000,algoAPerguntar,resolve);
+    }
+    perguntarAlgo(algoAPerguntar,resolve)
+    {
+        console.log(algoAPerguntar);
+
+        if(algoAPerguntar == "Qual o seu nome?")
+        {
+            resolve("Gostei do seu nome");
+        }
+        else if(algoAPerguntar == "O que gosta de fazer?")
+        {
+            resolve("Eu gosto de ver desenhos animados");
+        }
+        else
+        {
+            resolve("Eu trabalho e estudo");
+        }
+    }
+
+    darRespostaApos2Segundos(resposta)
+    {
+        setTimeout(this.darResposta,2000, resposta);
+    }
+    darResposta(resposta)
+    {
+        console.log(resposta);
+    }
+
+    seIntroduzirEm2segsEAoTerminarPerguntarNome(introducao)
+    {
+        var myPromise = new Promise((resolve,reject)=>
+        {
+            this.introduzirApos2Segundos(introducao,resolve);
+        });
+
+        myPromise.then(algo => 
+            {
+                var myPromise2 = new Promise((resolve,reject)=>
+                {
+                    this.perguntarAlgoApos2Segundos.bind(this)(algo,resolve);
+                });
+                return myPromise2;
+            }
+        ).then(resposta=>
+            {
+                this.darRespostaApos2Segundos.bind(this)(resposta);
+            }
+        );
+    }
+}
+
+var comeco = new ComecoDeConversa("Annie");
+comeco.seIntroduzirEm2segsEAoTerminarPerguntarNome("Oi, sou");
+        </code>
+    </pre>
+
+<script src="javascript/scripts.js"></script>
+</body>
+</html>

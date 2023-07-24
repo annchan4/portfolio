@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Jogo simples em javascript</title>
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar px-0 mx-0">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <h1 style="margin-top:10px">Jogo simples em javascript</h1>
+    <p>Aqui temos um jogo simples criado com javascript. Você pode mover o player e tem um NPC que se move automaticamente</p>
+    <p>A arena, obstáculos, o player, o NPC e seus movimentos sao criados via javascript</p>
+    <p>Para mexer o player (0.0) use as setas do teclado</p>
+    <p>O NPC(-_-) se mexe aleatoriamente sempre que possível usando setInterval (800ms)</p>
+    <p>Se ocorrer algum erro no posicionamento dos personagens, eles serão tratados via try-catch do javascript</p>
+    <div id="erroSetPositionCharacter"></div> <!--caso desse erro ao setar posicao iniciar do jogador-->
+    
+    <div id="arenaStarterForm">
+        <label for="arenaSizeRows">Tamanho da arena (linhas e colunas):</label>
+        <input type="number" id="arenaSizeRows" min="1" value="1">
+        <input type="number" id="arenaSizeCols" min="1" value="1">
+        <button onclick="startEverything()">Iniciar jogo</button>
+
+    </div>
+    <table id="myTable"></table>
+</body>
+<script src="javascript/scripts.js"></script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Desafio - salvar e carregar formulário</title>
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar px-0 mx-0">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <h1 style="margin-top: 10px;">Desafio - salvar e carregar formulário via arquivo de texto</h1>
+    <p>Preencha o formulário abaixo e salve em arquivo de texto. Carregue a página e abra o arquivo para voltar ao estado anterior</p>
+    <p>Obs: Aqui não temos um input do tipo file para carregar arquivo, mas vamos criar um internamente via javascript</p>
+    <form id="myForm">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome">
+        </div>
+        <div style="margin-top:10px;">
+            <label for="dia">Dia da semana favorito:</label>
+            <select id="dia">
+                <option value="seg">Segunda</option>
+                <option value="ter">Terça</option>
+                <option value="qua">Quarta</option>
+                <option value="qui">Quinta</option>
+                <option value="sex">Sexta</option>
+                <option value="sab">Sábado</option>
+                <option value="dom">Domingo</option>
+            </select>
+        </div>
+        <div style="margin-top:10px;">
+            <input type="checkbox" id="receberNotificacoes">
+            <label for="receberNotificacoes">Receber notificações</label>
+        </div>
+
+        <div style="margin-top:10px;">
+            <button onclick="salvarFormulario()">Salvar</button>
+            <button type="button" onclick="carregarFormulario()" style="margin-left:10px;">Carregar</button>
+            <!--esse segundo botao tem esse type porque caso contrario seria tido como submit, e enviaria um formulario, fazendo nada-->
+        </div>
+    </form>
+</body>
+<script src="javascript/scripts.js"></script>
+</html>

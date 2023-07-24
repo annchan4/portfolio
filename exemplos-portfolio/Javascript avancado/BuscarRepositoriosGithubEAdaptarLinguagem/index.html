@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Pesquisar repositórios do github</title>
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar px-0 mx-0">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+    <h1 style="margin-top: 10px;">Busca por repositórios github</h1>
+    <p>Busque por repositórios do github e mude a língua deste website usando o menu perto da busca</p>
+    <p>Será feita uma busca via fetch() na api do github</p>
+    <p>A língua selecionada será armazenada para futuros acessos usando o localStorage! Tente mudá-la, fechar o navegador e abrir novamente</p>
+    <p>Os resultados da pesquisa serão armazenado para futuros acessos usando o sessionStorage! Tente fazer uma busca e dar f5(se fechar o navegador, dados irão se perder)</p>
+    <p>Ao olhar o código fonte do projeto, perceberá que é demonstrado meu conhecimento em módulos, onde os scripts css se acessam</p>
+    <div class="searchForm">
+        <label for="searchInput">Busca:</label>
+        <input type="text" id="searchInput"/>
+    </div>
+    <div class="searchForm">
+        <label for="languageTagSelect">Lingua:</label>
+        <select id="languageTagSelect">
+            <option value="pt-BR" selected>pt-BR</option>
+            <option value="en-US">en-US</option>
+            <option value="en-AU">en-AU</option>
+            <option value="ja">ja</option>
+        </select>
+    </div>
+    <div class="searchForm">
+        <input type="button" value="Buscar" id="searchButton"/> <!--a funcao executada vai ser adicionada via javascript porque modulos nao podem definir funcoes para onclick=-->
+    </div>
+
+    <ul id="listOfGithubRepositories">
+    </ul>
+
+<script src="javascript/scripts.js" type="module"></script>
+<script src="javascript/language.js" type="module"></script>
+<script

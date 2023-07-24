@@ -1,0 +1,61 @@
+html
+{
+    scroll-behavior: smooth;
+    /*serve para quando o usuario clicar na ancora "voltar para cima"
+    a pagina fazer um efeito de rolagem em vez de voltar instantaneamente*/
+}
+
+body
+{
+    margin: 0; /*todo body ja vem com um espacamento invisivel entre o conteudo
+    e a borda da pagina...para tirar isso basta fazer margin 0*/
+}
+
+
+a
+{
+    color: #3366cc;
+}
+a:not(:hover)
+{
+    /*quando o mouse n estiver em cima*/
+    text-decoration: none; /*tira todos os sublinhados*/
+}
+
+.cabecalho
+{
+    background-color: #eaecf0;
+    padding: 12px 24px; /*em cima e embaixo espacamento de 12 pixels
+    entre a figura e seu contorno (visto pelo background), e nas
+    laterais fica 24px*/
+}
+.cabecalho-conteudo
+{
+    max-width: 40em;
+    margin:0 auto;/*o auto vai fazer o texto ficar centralizado na 
+    pagina,pois o auto indica um ajuste de acordo com o resto do espaço
+    que o componente pode ocupar na página. OBS: SOH FUNCIONA PQ DEFINI UMA
+    MAX-WIDTH!*/
+}
+
+.figure-logo
+{
+    margin: 0; /*todo Figure tem uma borda invisivel. Para tirar, basta fazer amargin ficar zerada*/
+    font-family: 'Times New Roman', Times, serif;/*para as captions,use essa fonte*/
+    /*tudo abaixo serviu para o texto da caption da logo 
+    ficar na posicao ideal*/
+    display:flex; /*faz texto ficar na direita*/
+    align-items: center; /*centraliza verticalmente texto*/
+}
+.figcaption-logo
+{
+    margin: 0 12px; /*em cima e embaixo espacamento de 0 pixels
+    entre o texto e a caption, e nas laterais fica 12px*/
+    font-size: 35px;
+}
+.rodape
+{
+    background-color: #eaecf0;
+    text-align: center;
+    padding: 12px; /*cima,direita,baixo,esq tudo com espacamento entre o rodape e seu proprio contorno*/
+}

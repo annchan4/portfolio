@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/menuDeNavegacao.css">
+    <title>Fazer arquivo js usar coisas de outro arquivo</title>
+</head>
+<body>
+    <header>
+        <div class="flexContainer-navbar px-0 mx-0">
+            <div>
+                <!--div da imagem-->
+                <img src="../../../img/annchan4LogoSmall.png" alt="">
+            </div>
+            <div class="navbar-desktop">
+                <!--div do menu no desktop-->
+                <ul class="flexContainer-nav-menu">
+                    <li class="textoDonav-menu"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menu"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menu"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menu"><a href="../../../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="navbar-mobile">
+                <!--div do menu no desktop-->
+                <ul class="navbar-mobile-list" id="navbar-mobile-list">
+                    <li class="textoDonav-menumobile"><a href="../../../index.html">Portfolio</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Certificados</a></li>
+                    <li class="textoDonav-menumobile"><a href="#">Sobre</a></li>
+                    <li class="textoDonav-menumobile"><a href="../../../contato.html">Contato</a></li>
+                    <a href="#" class="botao-close-menu-mobile">
+                        <img src="../../../img/x-lg.svg" alt="icone de fechamento">
+                    </a>
+                </ul>
+                <a href="#navbar-mobile-list" class="botao-menu-hamburguer">
+                    <img src="../../../img/menuHamburguer.svg" alt="icone de abertura">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <h1 style="margin-top: 10px;">Fazer arquivo js usar coisas de outro arquivo</h1>
+    <p>Basicamente, tenho um arquivo scripts.js que vai importar algumas coisas que um arquivo calc.js vai exportar</p>
+    <p>Inspecione o console para ver o resultado</p>
+    <p>calc.js:</p>
+    <pre>
+        <code>
+export var myVar = 5;
+
+export function myFunc()
+{
+    console.log('Imprimi algo no console');
+}
+
+export class Calc
+{
+    static sum(a,b)
+    {
+        return a + b;
+    }
+}
+        </code>
+    </pre>
+    <p>scripts.js:</p>
+    <pre>
+        <code>
+import {Calc, myVar, myFunc} from './calc.js';
+
+myFunc();
+console.log(Calc.sum(5,3),myVar);
+        </code>
+    </pre>
+
+
+<script src="javascript/scripts.js" type="module"></script>
+</body>
+</html>

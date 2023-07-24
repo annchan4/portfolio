@@ -1,0 +1,246 @@
+p
+{
+    font-weight: bold;
+}
+.obs
+{
+    color:red;
+    font-size:0.8rem;
+}
+
+#tabela1,#tabela1 td,#tabela1 th,#tabela3, #tabela3 td, #tabela3 th
+{
+    border:solid 1px black; 
+    /*naturalmente nao existem linhas na tabela., mas posso te-las com isso*/
+    border-collapse: collapse; 
+    /*naturalmente as linhas criadas acima sao duplas linhas. Para ter
+    uma linha apenas, tenho de fazer isso*/
+}
+
+#tabela1 td, #tabela1 th, #tabela3 td, #tabela3 th
+{
+    width:150px;
+    text-align: center;
+}
+
+#tabela1 th, #tabela2 th, #tabela3 th
+{
+    background-color: aquamarine;
+    font-size: 14px;
+
+}
+
+#tabela1 td, #tabela2 td, #tabela3 td
+{
+    background-color:gainsboro;
+}
+
+#tabela2, #tabela2 td, #tabela2 th
+{
+    border:solid 1px white; 
+    /*naturalmente nao existem linhas na tabela., mas posso te-las com isso*/
+
+}
+
+#tabela2 td, #tabela2 th
+{
+    width:150px;
+    text-align: center;
+}
+
+#tabela4,#tabela5
+{
+    width:100%;
+}
+#tabela4,#tabela4 th,#tabela4 td,#tabela5,#tabela5 th,#tabela5 td,#tabela6 th, #tabela6 td
+{
+    border:solid 1px black;
+    border-collapse: collapse;
+}
+
+#tabela4 th
+{
+    background-color: rgb(84, 250, 250);
+    font-size: 1.3rem;
+    width: calc(100%/7); 
+    /*com isso, todas as celulas vao ficar com
+    o mesmo tamanho, pois eu dividi o tamanho total pelo num de colunas.
+    De quebra, como usei percentual, eu tb garanto que funciona mesmo 
+    em telas de outro tamanho, porem para isso era melhor a tabela ter
+    width em % tambem*/
+    /*obs: No celular, a única coisa que não vai dar certo seria 
+    que as vezes, por causa do tamanho da fonte não poder ser 
+    em % e ficar grande no browser e no celular, é a fonte! 
+    Por esse motivo, pode ser que no celular a sua tabela não caiba 
+    todinha na sua tela, sendo necessário scroll para ver ela por 
+    completo */
+}
+#tabela4 td
+{
+    text-align: center;
+    font-size:1.2rem;
+}
+
+#tabela4 td:hover
+{
+    background-color: tomato;
+    cursor:pointer; /*cursor em cima das celulas vai virar maozinha, parecendo um link*/
+}
+#tabela4 th:hover
+{
+    background-color: tomato;
+    cursor:pointer;
+}
+
+#tabela5 tr:first-child
+{
+    /*os primeiros filhos diretos do tr de tabela5 sao a primeira
+    linha todinha da tabela, seja <tr> ou <td>! 
+    E nem precisei criar classe para isso!*/
+    background-color: darkkhaki;
+}
+
+
+#colgroup-colunas1
+{
+    background-color: aqua;
+    font-size: 1.3rem;
+}
+#colgroup-colunas2
+{
+    background-color: rgb(87, 170, 104);
+}
+
+#tabela7
+{
+    width:100%;
+    border-spacing: 5px 0; /*cria um espaco entre cada celula, porem
+    nao funcionaria se a tabela7 tivesse border-collapse: collapse;*/
+    /*5px de espaco horizontal e 0 de vertical*/
+}
+#tabela7,#tabela7 th, #tabela7 td
+{
+    border:solid 1px black;
+    text-align: left;
+}
+
+#tabela7 tr:nth-child(even)
+{
+    /*tr normal seria todas as linhas, mas aqui eu quero apenas as pares*/
+    background-color: lightsteelblue;
+}
+
+#tabela8
+{
+    width:100%;
+    text-align: left;
+    color:white;
+}
+#tabela8,#tabela8 td,#tabela8 th
+{
+    border: solid 2px gray;
+    border-collapse: collapse;
+}
+#tabela8 th
+{
+    background-color: gray;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+#tabela8 td
+{
+    background-color: black;
+    padding-left: 15px;
+}
+#tabela8 th,#tabela8 td
+{
+    width: 50px;
+    height: 50px;
+}
+
+#tabela9
+{
+    text-align: left;
+    width:50%; /*faz a tabela ficar centralizada*/
+    margin: 0px auto; /*faz a tabela ficar centralizada*/
+    border-collapse: collapse; 
+    /*se nao tivesse isso acima, teriamos linhas verticais entre as colunas*/
+}
+#tabela9 th
+{
+    border-bottom: 3px solid black;
+    padding-right: 20px;
+}
+
+#tabela9 td
+{
+    border-bottom: 1px solid gray;
+    padding: 10px 10px 10px 0; /*visto que eu gostaria de ter
+    o texto dos meus td alinhados com os th,eu nao
+    coloquei padding-left */
+}
+
+#tabela9 tbody tr:hover
+{
+    /*eu n queria que os th ficassem com esse efeito, por isso 
+    usei o tbody*/
+    background-color: rgb(185, 185, 185);
+}
+
+#tabela10
+{
+    width: 100%;
+    text-align: center;
+}
+
+#tabela10 thead
+{
+    Text-transform: uppercase; /*todas as letras ficam eem maiusculo*/
+    color:gray;
+}
+
+#tabela10,#tabela10 th,#tabela10 td
+{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+#tabela10 tbody td,#tabela10 tbody th,#tabela10 thead th
+{
+    padding:10px;
+}
+
+.textoPrecoGrande
+{
+    font-size:3rem;
+    color:white;
+}
+
+.basico
+{
+    background-color:cornflowerblue;
+}
+.padrao
+{
+    background-color: blue;
+}
+.avancado
+{
+    background-color: blueviolet;
+}
+
+#tabela10 button
+{
+    color:white;
+    padding: 20px;
+    cursor:pointer; /*fica com cursor em formato maozinha ao ficar em ciam do botao*/
+    border:none; /*necessario para botoes circulares*/
+    border-radius: 7px;/*necessario para botoes circulares*/
+}
+
+#tabela10 button:hover
+{
+    opacity:0.8; /*quando o mouse ficar em cima, 
+    vai ficar mais transparente*/
+}
+
