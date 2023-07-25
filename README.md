@@ -1,2 +1,23 @@
-# portfolio
-minha página de portfólio, com exemplos de projetos mais reais e pequenos códigos, assim como informações para contato
+# Portfólio de Annie Rocha (Annchan4) 
+Meu website para portfólio, com exemplos de projetos mais reais e pequenos códigos, assim como uma página com mais detalhes sobre mim (e informações para contato)  e os certificados de cursos que eu obtive. As páginas são estilizadas usando CSS e o Bootstrap 💻
+
+## Versão desktop
+[<img src="gifs/Portfolio1.gif" alt="gif do meu portfolio - projetos principais">](https://www.annchan4.com/)
+
+[<img src="gifs/Portfolio2.gif" alt="gif do meu portfolio - projetos principais">](https://www.annchan4.com/)
+
+[<img src="gifs/Portfolio3.gif" alt="gif do meu portfolio - projetos principais">](https://www.annchan4.com/)
+
+## Versão mobile
+[<img src="gifs/portfolio_mobile1.gif" alt="gif do meu portfolio - projetos principais">](https://www.annchan4.com/)
+
+[<img src="gifs/portfolio_mobile2.gif" alt="gif do meu portfolio - projetos principais">](https://www.annchan4.com/)
+
+[<img src="gifs/portfolio_mobile3.gif" alt="gif do meu portfolio - projetos principais">](https://www.annchan4.com/)
+
+## Tecnologias Utilizadas
+- HTML
+- CSS
+- Javascript
+- Boostrap
+
