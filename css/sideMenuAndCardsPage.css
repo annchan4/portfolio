@@ -239,14 +239,19 @@ footer ul a
     /*coisas da grid que engloba tudo*/
     .grid-engloba-tudo
     {
-        padding-left:32%;
+        padding-left:37%;
         padding-right:5%;
+    }
+
+    .textoSecaoPortfolio
+    {
+        text-align: center;
     }
 
     /*coisas do navPanelLateral*/
     .gridItem-navPanelLateral
     {
-        width:30%;
+        width:35%;
     }
 
     #textoDescricao
@@ -255,7 +260,7 @@ footer ul a
     }
     .gridItem-navPanelLateral ul li,#botao-hyperlink-voltar-ao-topo
     {
-        font-size: 10px;
+        font-size: 9px;
     }
     
     .cards
@@ -267,32 +272,15 @@ footer ul a
         width:auto;
         flex-wrap: wrap; /*no celular, eu quero que os itens estejam um em cada linha, se n tiver espaco, passa para baixo*/
     }
-}
-
-@media (max-width: 380px) 
-{
-    #navPanelLateralTitulo
-    {
-        font-size: 3vw;
-    }
-    #textoDescricao
-    {
-        font-size: 3vw;
-    }
-
-    .gridItem-navPanelLateral ul li,#botao-hyperlink-voltar-ao-topo
-    {
-        font-size: 10px;
-    }
-
-    .card
-    {
-        width:200px;
-    }
 
     .tituloCard
     {
         font-size: 15px;
+    }
+
+    .card
+    {
+        width:100%;
     }
 }
 
